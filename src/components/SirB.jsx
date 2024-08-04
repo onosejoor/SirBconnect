@@ -30,7 +30,9 @@ function SirB() {
       entries.forEach((entry) => {
         let element = entry.target;
 
-        if (entry.isIntersecting) {
+        if (entry.isIntersecting ) {
+          console.log(entry.boundingClientRect);
+          
           setRef(element.id);
           element.classList.add("view");
         }
