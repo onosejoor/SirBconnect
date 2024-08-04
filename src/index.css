@@ -418,27 +418,6 @@ button {
   background-repeat: no-repeat;
   background-position: left;
   height: 100px;
-  animation: turn 10s infinite ease;
-  position: relative;
-  z-index: -1;
-}
-
-@keyframes turn {
-  0% {
-    background-position: left;
-  }
-  50% {
-    background-position: center;
-    /* transform: rotate(10deg); */
-  }
-  75% {
-    background-position: right;
-    /* transform: rotate(20deg); */
-  }
-  100% {
-    background-position: left;
-    /* transform: rotate(-20deg); */
-  }
 }
 
 /* Review Section */
@@ -863,6 +842,7 @@ button {
     width: 60%;
     opacity: 0.5;
     z-index: -1;
+    background-position: center;
   }
 
   .skills {
