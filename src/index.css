@@ -560,6 +560,7 @@ button {
   margin: 0;
   /* background: linear-gradient(to left, #278fe4, transparent); */
   border-top: 1px solid #ffffff;
+  right: 0;
 }
 
 .footer {
