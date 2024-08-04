@@ -14,12 +14,12 @@ function Contact() {
           <img src="/images/customer.png" alt="customer support"/>
         <div className="contact-container">
           <ContactCard
-            link="mailto: example@gmail.com"
+            link="mailto: sirb@gmail.com"
             text="✉️ Send An Email"
           />
-          <ContactCard link="tel: +2341234567890" text="📞 Call Us" />
+          <ContactCard link="tel: +2348066474524" text="📞 Call Us" />
           <ContactCard
-            link="https://wa.me/+1234567890"
+            link="https://wa.me/+2348066474524"
             img={<img src="/images/icons/icons8-whatsapp.svg" />}
             text="Whatsapp Us"
           />
