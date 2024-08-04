@@ -12,20 +12,20 @@ function Reviews() {
           <ReviewCard
             src="/images/Avatar/woman1.jpg"
             text="The insights were detailed and actionable, helping us make informed decisions that have already started to pay off."
-            name="Avatar aang"
+            name="Linda"
             role="Customer"
           />
           <ReviewCard
             src="/images/Avatar/man2.jpg"
             text=" I highly recommend Sir-B Connect Integrated Services for anyone in need of reliable and thorough research."
-            name="Avatar aang"
+            name="Greg"
             role="Customer"
           />
 
           <ReviewCard
             src="/images/Avatar/man1.jpg"
             text="Sir-B Connect Integrated Services provided us with detailed and actionable market analysis. Their insights were crucial for our strategic planning, and the customer service was exceptional. Highly recommend!"
-            name="Avatar aang"
+            name="Jason"
             role="Customer"
           />
         </div>
