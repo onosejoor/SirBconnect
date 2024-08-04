@@ -780,6 +780,10 @@ button {
       margin-bottom: 10px;
     }
   }
+    section{
+    right: 0 !important;
+  } 
+
 
   .touch{
     flex-direction: column;
@@ -894,9 +898,6 @@ button {
     width: 250px;
   }
 
-  /* section{
-    right: 0 !important;
-  } */
 
   .contactHead{
     font-size: xx-large;
