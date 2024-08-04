@@ -60,13 +60,15 @@ function SirB() {
   }
   return (
     <>
+    <div className="container">
       <Nav set={set} dark={dark} />
       <Header  />
       <About current={ref}/>
       <Skills />
       <Reviews />
       <Contact />
-      <Footer dark={dark} />
+      <Footer dark={dark} />      
+    </div>
     </>
   );
 }
