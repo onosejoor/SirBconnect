@@ -877,9 +877,6 @@ button {
     }
   }
 
-  .reviewHead{
-    font-size: x-large !important;
-  }
 
   .footer {
     grid-template-columns: 1fr;
@@ -897,9 +894,9 @@ button {
     width: 250px;
   }
 
-  section{
+  /* section{
     right: 0 !important;
-  }
+  } */
 
   .contactHead{
     font-size: xx-large;
