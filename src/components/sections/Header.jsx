@@ -6,7 +6,7 @@ function Header() {
           <h2 className="top">  Your top choice of quality services  </h2>
           <h1 className="h1Text">
             Boost your research productivity with{" "}
-            <span className="comName">Sir-B Connect</span> today!
+            <span className="comName">SirBconnect</span> today!
           </h1>
 
           <a href="#contact"><button className="contact">  Contact Us    </button></a>

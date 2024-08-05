@@ -39,75 +39,77 @@ function Nav({ dark, set }) {
             alt="SirB logo"
           />
         </a>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          onClick={show}
-          type="checkbox"
-          className="bars"
-          viewBox="0 0 50 50"
-          fill="#fff"
-          width="20px"
-          height="20px"
-        >
-          <path d="M 0 9 L 0 11 L 50 11 L 50 9 Z M 0 24 L 0 26 L 50 26 L 50 24 Z M 0 39 L 0 41 L 50 41 L 50 39 Z" />
-        </svg>
-        <ul className="nav-items">
-          {showed && (
-            <svg
-              onClick={show}
-              fill="#fff"
-              width="30px"
-              height="30px"
-              viewBox="0 0 256 256"
-              id="Flat"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
+
+        <div className="navCon">
+          <img
+            onClick={set}
+            className="theme"
+            src={
+              dark === "true"
+                ? "/images/theme/light.svg"
+                : "/images/theme/dark.svg"
+            }
+          />
+
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            onClick={show}
+            type="checkbox"
+            className="bars"
+            viewBox="0 0 50 50"
+            fill="#fff"
+            width="20px"
+            height="20px"
+          >
+            <path d="M 0 9 L 0 11 L 50 11 L 50 9 Z M 0 24 L 0 26 L 50 26 L 50 24 Z M 0 39 L 0 41 L 50 41 L 50 39 Z" />
+          </svg>
+          <ul className="nav-items">
+            {showed && (
+              <svg
                 onClick={show}
-                d="M202.82861,197.17188a3.99991,3.99991,0,1,1-5.65722,5.65624L128,133.65723,58.82861,202.82812a3.99991,3.99991,0,0,1-5.65722-5.65624L122.343,128,53.17139,58.82812a3.99991,3.99991,0,0,1,5.65722-5.65624L128,122.34277l69.17139-69.17089a3.99991,3.99991,0,0,1,5.65722,5.65624L133.657,128Z"
-              />
-            </svg>
-          )}
-          <Lists
-            click={showed ? shut : null}
-            class1="nav"
-            class2="nav-link"
-            text="Services"
-            link="#services"
-          />
-          <Lists
-            click={showed ? shut : null}
-            class1="nav"
-            class2="nav-link"
-            text="About"
-            link="#about"
-          />
-          <Lists
-            click={showed ? shut : null}
-            class1="nav"
-            class2="nav-link"
-            text="Contact"
-            link="#contact"
-          />
-          <Lists
-            click={showed ? shut : null}
-            class1="nav"
-            class2="nav-link"
-            text="Reviews"
-            link="#reviews"
-          />
-          <li className="nav">
-            <img
-              onClick={set}
-              className="theme"
-              src={
-                dark === "true"
-                  ? "/images/theme/light.svg"
-                  : "/images/theme/dark.svg"
-              }
+                fill="#fff"
+                width="30px"
+                height="30px"
+                viewBox="0 0 256 256"
+                id="Flat"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  onClick={show}
+                  d="M202.82861,197.17188a3.99991,3.99991,0,1,1-5.65722,5.65624L128,133.65723,58.82861,202.82812a3.99991,3.99991,0,0,1-5.65722-5.65624L122.343,128,53.17139,58.82812a3.99991,3.99991,0,0,1,5.65722-5.65624L128,122.34277l69.17139-69.17089a3.99991,3.99991,0,0,1,5.65722,5.65624L133.657,128Z"
+                />
+              </svg>
+            )}
+            <Lists
+              click={showed ? shut : null}
+              class1="nav"
+              class2="nav-link"
+              text="Services"
+              link="#services"
             />
-          </li>
-        </ul>
+            <Lists
+              click={showed ? shut : null}
+              class1="nav"
+              class2="nav-link"
+              text="About"
+              link="#about"
+            />
+            <Lists
+              click={showed ? shut : null}
+              class1="nav"
+              class2="nav-link"
+              text="Contact"
+              link="#contact"
+            />
+            <Lists
+              click={showed ? shut : null}
+              class1="nav"
+              class2="nav-link"
+              text="Reviews"
+              link="#reviews"
+            />
+          </ul>
+        </div>
       </nav>
     </>
   );
