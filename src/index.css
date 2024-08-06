@@ -34,6 +34,7 @@ button:hover {
 .container {
   position: relative;
   z-index: 1000;
+  margin: 0 auto;
 }
 
 section {
@@ -112,8 +113,8 @@ button {
 
 /* Dark Mode */
 .dark {
-  background: linear-gradient(to right, #1f1f1f, #212529);
-
+  /* background: linear-gradient(to right, #1f1f1f, #212529); */
+background-color: black;
   .nav:first-child {
     border-color: white;
   }
@@ -295,15 +296,6 @@ button {
     cursor: pointer;
     align-items: center;
   }
-  /* .nav::before{
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    height: 5px;
-    background-color: #000f1a;
-    width: 100%;
-    content: "";
-  } */
 
   a[href="/"] {
     display: flex;
@@ -339,6 +331,7 @@ button {
   transition: all 0.2s ease-in-out;
   text-transform: capitalize;
   color: #001233;
+  font-size: large;
 }
 
 .nav-link:hover {
@@ -481,6 +474,7 @@ button {
   display: flex;
   justify-content: center;
   gap: 50px;
+  flex-wrap: wrap;
 }
 
 .reviewHead {
@@ -505,7 +499,7 @@ button {
     border: 2px solid #4a97e8;
   }
   .reviewText {
-    color: #212529;
+    color: white;
   }
   b {
     font-weight: 200;
@@ -679,9 +673,6 @@ button {
   color: #001233;
 }
 
-/* @media(min-width: 1001px){
-
-} */
 
 @media (max-width: 1000px) {
   .top {
@@ -708,7 +699,7 @@ button {
     right: -100%;
     top: 0px;
     padding: 1em 0.5em;
-    background-color: #0e6fd7;
+    background-color: #489fae;
     height: 100%;
     width: 300px;
     transition: right 0.2s linear;
@@ -759,6 +750,8 @@ button {
   }
 
   /* Services */
+
+
 
   #skill {
     justify-content: space-evenly;
@@ -863,6 +856,10 @@ button {
     top: 0;
     background-color: #9ab0c7cb;
     padding-top: 1em;
+  }
+
+  .nav-link{
+    font-size: large;
   }
 
   .logo {
