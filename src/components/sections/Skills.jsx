@@ -38,8 +38,10 @@ function Skills() {
         <SkillDiv
           src="/images/skills/internet.jpg"
           text="Internet Services and Research"
+          url="internet-services"
         />
         <SkillDiv
+          url="job-application"
           src="/images/skills/research3.jpg"
           text="Job Applications                                               "
         />
@@ -47,14 +49,17 @@ function Skills() {
         <SkillDiv
           src="/images/skills/graphicDesign.jpg"
           text="Graphic designs and Trainings"
+          url="graphic-design"
         />
         <SkillDiv
           src="/images/skills/research2.jpg"
           text="School Assignments and Projects"
+          url="school-ca"
         />
         <SkillDiv
           src="/images/skills/consultant.jpg"
           text="Business Consultation"
+          url="consultation"
         />
       </div>
     </section>

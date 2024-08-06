@@ -32,13 +32,17 @@ function Nav({ dark, set }) {
     <>
       <div className="overlay" onClick={show}></div>
       <nav className="navBar">
-        <a href="/">
-          <img
-            className="logo"
-            src={dark === "true" ? "/images/Logo2.png" : "/images/Logo1.png"}
-            alt="SirB logo"
-          />
-        </a>
+        <div className="logoContainer">
+          <a href="/">
+            <img
+              className="logo"
+              src={dark === "true" ? "/images/Logo2.png" : "/images/Logo1.png"}
+              alt="SirB logo"
+            />
+          </a>
+
+          <h4>SirBconnect Integrated Services</h4>
+        </div>
 
         <div className="navCon">
           <img
@@ -110,7 +114,9 @@ function Nav({ dark, set }) {
             />
           </ul>
         </div>
+
       </nav>
+      {/* <progress className="progress" value={10} max={100}></progress> */}
     </>
   );
 }
