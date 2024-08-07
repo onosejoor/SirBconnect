@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const SkillDiv = (props) => {
   return (
-    <Link to={`/${props.url}`}>
+    <Link to={`/${props.url}`} onClick={window.location.reload}>
       <div className="skills">
         <div className="skillIMG">
           <img src={props.src} alt="skills" loading="lazy" />

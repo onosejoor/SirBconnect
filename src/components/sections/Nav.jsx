@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import Lists from "../snippets/List";
 
-function Nav({ dark, set }) {
+function Nav({ dark, set, routed }) {
   const [showed, setShowed] = useState(false);
 
   useEffect(() => {
@@ -84,37 +84,49 @@ function Nav({ dark, set }) {
                 />
               </svg>
             )}
-            <Lists
-              click={showed ? shut : null}
-              class1="nav"
-              class2="nav-link"
-              text="Services"
-              link="#services"
-            />
-            <Lists
-              click={showed ? shut : null}
-              class1="nav"
-              class2="nav-link"
-              text="About"
-              link="#about"
-            />
-            <Lists
-              click={showed ? shut : null}
-              class1="nav"
-              class2="nav-link"
-              text="Contact"
-              link="#contact"
-            />
-            <Lists
-              click={showed ? shut : null}
-              class1="nav"
-              class2="nav-link"
-              text="Reviews"
-              link="#reviews"
-            />
+
+            {routed ? (
+              <Lists
+                click={showed ? shut : null}
+                class1="nav"
+                class2="nav-link"
+                text="Home"
+                link="/"
+              />
+            ) : (
+              <>
+                <Lists
+                  click={showed ? shut : null}
+                  class1="nav"
+                  class2="nav-link"
+                  text="Services"
+                  link="/#services"
+                />
+                <Lists
+                  click={showed ? shut : null}
+                  class1="nav"
+                  class2="nav-link"
+                  text="About"
+                  link="#about"
+                />
+                <Lists
+                  click={showed ? shut : null}
+                  class1="nav"
+                  class2="nav-link"
+                  text="Contact"
+                  link="#contact"
+                />
+                <Lists
+                  click={showed ? shut : null}
+                  class1="nav"
+                  class2="nav-link"
+                  text="Reviews"
+                  link="#reviews"
+                />
+              </>
+            )}
           </ul>
         </div>
-
       </nav>
       {/* <progress className="progress" value={10} max={100}></progress> */}
     </>

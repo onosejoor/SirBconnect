@@ -376,10 +376,11 @@ background-color: black;
     /* padding-left: 1em; */
     /* font-family: "Roboto", sans-serif; */
 
-    .comName {
-      color: #001f9a;
-    }
   }
+}
+
+.comName {
+  color: #001f9a;
 }
 
 .contact {
@@ -446,14 +447,14 @@ background-color: black;
   width: 300px;
   border-radius: 5px;
   background-color: #799cc0;
-  transition: all 0.5s ease-out;
+  transition: all 0.2s ease-out;
   padding: 1%;
   min-height: 250px;
   border: 0.5px solid #03055e5b;
 }
 
 .skills:hover {
-  box-shadow: 0px 0px 5px #6c757d;
+  box-shadow: 0px 0px 10px #797e82;
   border-color: #005ee3;
 }
 
@@ -531,7 +532,6 @@ background-color: black;
   margin-bottom: 0;
   background-color: #869fba;
   padding: 1em 0 0 0;
-  opacity: 1 !important;
 }
 
 .contactHead {
@@ -683,6 +683,31 @@ background-color: black;
 
 .location {
   color: #001233;
+}
+
+/* GRAPHIC DESIGN PAGE */
+
+.design-container{
+  justify-content: space-between;
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  padding-left: 2em;
+
+  div > h1{
+    font-size: xxx-large;
+    margin-bottom: 20px;
+  }
+
+  h3{
+      background: linear-gradient( to right, #03045e,  red);
+      background-clip: text;
+      color: transparent;
+  }
+
+  img{
+    height: 400px;
+  }
 }
 
 

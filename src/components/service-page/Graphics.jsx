@@ -2,10 +2,11 @@ import { useEffect } from "react";
 import Contact from "../sections/Contact";
 import Footer from "../sections/Footer";
 import Nav from "../sections/Nav";
-import Job from "./router-sections/Job";
+import GraphicDesign from "./router-sections/GraphicSection";
 
-function JobApplication({ dark, set }) {
+// then add this to the function that is called for re-rendering
 
+function Graphics({ dark, set }) {
   useEffect(() => {
     window.scrollTo({
       top: 0,
@@ -13,14 +14,16 @@ function JobApplication({ dark, set }) {
       behavior: "instant",
     });
   }, []);
+
+
   return (
     <>
       <Nav dark={dark} routed={true} set={set} />
-      <Job />
+      <GraphicDesign />
       <Contact />
       <Footer />
     </>
   );
 }
 
-export default JobApplication;
+export default Graphics;
