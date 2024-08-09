@@ -1,7 +1,7 @@
 import Lists from "../snippets/List";
 import Svg from "../snippets/Svg";
 
-function Footer(props) {
+function Footer({ routed, ...props }) {
   return (
     <>
       <section id="footer" ref={props.currentRef}>
@@ -27,11 +27,31 @@ function Footer(props) {
             <h3 className="footHead">Quick links</h3>
             <div className="footLink">
               <ul>
-                <Lists class2="footer-link" text="Home" link="#" />
-                <Lists class2="footer-link" text="Services" link="#services" />
-                <Lists class2="footer-link" text="About" link="#about" />
-                <Lists class2="footer-link" text="Contact" link="#contact" />
-                <Lists class2="footer-link" text="Reviews" link="#reviews" />
+                <Lists
+                  class2="footer-link"
+                  text="Home"
+                  link={routed ? "#" : "/"}
+                />
+                <Lists
+                  class2="footer-link"
+                  text="Services"
+                  link={routed ? "/#services" : "#services"}
+                />
+                <Lists
+                  class2="footer-link"
+                  text="About"
+                  link={routed ? "/#about" : "#about"}
+                />
+                <Lists
+                  class2="footer-link"
+                  text="Contact"
+                  link={routed ? "/#contact" : "#contact"}
+                />
+                <Lists
+                  class2="footer-link"
+                  text="Reviews"
+                  link={routed ? "/#reviews" : "#reviews"}
+                />
               </ul>
             </div>
           </div>

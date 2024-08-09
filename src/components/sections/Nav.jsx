@@ -100,7 +100,7 @@ function Nav({ dark, set, routed }) {
                   class1="nav"
                   class2="nav-link"
                   text="Services"
-                  link="/#services"
+                  link="#services"
                 />
                 <Lists
                   click={showed ? shut : null}

@@ -7,10 +7,12 @@ import Contact from "./sections/Contact";
 import JobApplication from "./service-page/JobApplication";
 
 function App() {
+  // Get local storage Theme
   const [dark, setDark] = useState(localStorage.getItem("dark") || "false");
   localStorage.setItem("dark", dark);
   const [ref, setRef] = useState("");
 
+  // Set theme
   useEffect(() => {
     if (dark === "true") {
       document.body.classList.add("dark");
@@ -30,6 +32,20 @@ function App() {
   };
 
   useEffect(() => {
+    console.log("running");
+
+    const urlHash = window.location.hash;
+    if (urlHash.length) {
+      console.log(urlHash);
+
+      const element = document.getElementById(urlHash.substring(1));
+      if (element) {
+        element.scrollIntoView();
+      }
+    }
+  }, []);
+
+  useEffect(() => {
     const options = {
       root: null,
       rootMargin: "0px",
@@ -40,8 +56,6 @@ function App() {
         let element = entry.target;
 
         if (entry.isIntersecting) {
-          console.log(element);
-
           setRef(element.id);
           element.classList.add("view");
         }

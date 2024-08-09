@@ -1,47 +1,71 @@
-//  import ReviewCard from "../../snippets/ReviewCard";
+import ProjectCard from "../../snippets/ProjectCard";
+import Carousel from "./Carousel";
 
 const GraphicDesign = () => {
   return (
     <>
-      {/* <section id="reviews">
-        <div>
-        <h1 className="top reviewHead"> Customer Reviews </h1>
-        </div>
-        <div id="reviewWrapper">
-
-          <ReviewCard
-            src="/images/Avatar/woman1.jpg"
-            text="The insights were detailed and actionable, helping us make informed decisions that have already started to pay off."
-            name="Linda"
-            role="Customer"
-          />
-          <ReviewCard
-            src="/images/Avatar/man2.jpg"
-            text=" I highly recommend Sir-B Connect Integrated Services for anyone in need of reliable and thorough research."
-            name="Greg"
-            role="Customer"
-          />
-
-          <ReviewCard
-            src="/images/Avatar/man1.jpg"
-            text="Sir-B Connect Integrated Services provided us with detailed and actionable market analysis. Their insights were crucial for our strategic planning, and the customer service was exceptional. Highly recommend!"
-            name="Jason"
-            role="Customer"
-          />
-        </div>
-      </section> */}
-
       <section id="graphic-design">
         <div className="design-container">
           <div>
             <h1 className="designH1">
-              <span className="comName">SirBconnect: </span>Pioneering Creativity
-              in Graphic Design
+              <span className="comName">SirBconnect: </span>Pioneering
+              Creativity in Graphic Design
             </h1>{" "}
             <h3>Where Imagination Meets Innovation</h3>
           </div>
 
           <img src="/images/Router/designHead.png" alt="design picture" />
+        </div>
+      </section>
+
+      {/* About Section */}
+
+      <section id="graphic-about">
+        <div className="graphAbout">
+          <h1 className="graphicAboutHeader">
+            Unleashing Creativity:{" "}
+            <span className="comName">SirBconnect’s</span> Design Excellence
+          </h1>
+
+          <p className="graphicAboutText">
+            SirBconnect is renowned for its ability to transform ideas into
+            visually compelling designs. Their portfolio includes a wide range
+            of projects, from logo design and branding to marketing materials
+            and digital graphics.
+          </p>
+        </div>
+      </section>
+
+      {/* Skills */}
+      <section id="graphicSkills">
+        <h1 className="top">Our Services</h1>
+        <Carousel />
+        <div className="gSkills"></div>
+      </section>
+
+{/* Projects */}
+      <section id="graphicRecentProjects">
+        <h1 className="recentHeader top">
+          <span className="headerSpan">Recent Projects</span>
+        </h1>
+
+        <div id="projects">
+          <ProjectCard
+            header="Romantic Invitations"
+            text="Understanding the unique needs of each client, SirBconnect tailors its services to ensure that every design project aligns perfectly with the"
+          />
+          <ProjectCard
+            header="Romantic Invitations"
+            text="Understanding the unique needs of each client, SirBconnect tailors its services to ensure that every design project aligns perfectly with the"
+          />
+          <ProjectCard
+            header="Romantic Invitations"
+            text="Understanding the unique needs of each client, SirBconnect tailors its services to ensure that every design project aligns perfectly with the"
+          />
+          <ProjectCard
+            header="Romantic Invitations"
+            text="Understanding the unique needs of each client, SirBconnect tailors its services to ensure that every design project aligns perfectly with the"
+          />
         </div>
       </section>
     </>
