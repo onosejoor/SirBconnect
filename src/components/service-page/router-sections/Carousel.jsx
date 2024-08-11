@@ -55,7 +55,7 @@ const Carousel = () => {
               xmlns="http://www.w3.org/2000/svg"
               height="50"
               viewBox="0 96 960 960"
-              width="50"
+              width="60"
               className="carouselArrow"
             >
               <path d="M400 976 0 576l400-400 56 57-343 343 343 343-56 57Z" />
@@ -86,7 +86,7 @@ const Carousel = () => {
               xmlns="http://www.w3.org/2000/svg"
               height="50"
               viewBox="0 96 960 960"
-              width="50"
+              width="60"
               className="carouselArrow"
             >
               <path d="m304 974-56-57 343-343-343-343 56-57 400 400-400 400Z" />

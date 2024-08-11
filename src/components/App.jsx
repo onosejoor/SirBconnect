@@ -32,11 +32,9 @@ function App() {
   };
 
   useEffect(() => {
-    console.log("running");
-
     const urlHash = window.location.hash;
+    
     if (urlHash.length) {
-      console.log(urlHash);
 
       const element = document.getElementById(urlHash.substring(1));
       if (element) {

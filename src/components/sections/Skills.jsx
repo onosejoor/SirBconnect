@@ -35,6 +35,12 @@ function Skills() {
       <h1 className="about">Services</h1>
       <div className="arrow"></div>
       <div id="skill">
+
+      <SkillDiv
+          src="/images/skills/graphicDesign.jpg"
+          text="Graphic designs and Trainings"
+          url="graphic-design"
+        />
         <SkillDiv
           src="/images/skills/internet.jpg"
           text="Internet Services and Research"
@@ -46,15 +52,11 @@ function Skills() {
           text="Job Applications                                               "
         />
         <SkillDiv src="/images/skills/scholarships.jpg" text="Scholarships" />
-        <SkillDiv
-          src="/images/skills/graphicDesign.jpg"
-          text="Graphic designs and Trainings"
-          url="graphic-design"
-        />
+
         <SkillDiv
           src="/images/skills/research2.jpg"
           text="School Assignments and Projects"
-          url="school-ca"
+          url={`https://wa.me/+2347030953448/?text=Lets%20Work/discuss%20On%20School-Assignment`}
         />
         <SkillDiv
           src="/images/skills/consultant.jpg"

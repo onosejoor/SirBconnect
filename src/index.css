@@ -7,7 +7,7 @@ html {
 
 body {
   transition: all 0.2s ease-in;
-  background-color: #8ba1b5;
+  background-color: #7e9bb8;
   /*lightgray background-image: url("https://www.transparenttextures.com/patterns/az-subtle.png"); */
 }
 
@@ -260,6 +260,73 @@ button {
 
     .work {
       color: #bdddfe;
+    }
+  }
+
+  /* Graphics Page */
+
+  .designH1,
+  .graphicAboutText {
+    color: #fcfcfc;
+  }
+
+  .design-container{
+    .comName {
+      color: #19a4ef;
+    }
+
+    h3{
+      background: linear-gradient(to right, #ade8f4, red);
+      background-clip: text;
+    }
+  }
+
+  .graphicAboutHeader {
+    color: #ade8f4;
+
+    .comName {
+      color: #19a4ef;
+    }
+  }
+
+  #graphicSkills {
+    background: linear-gradient(to right, #23232381, transparent);
+  }
+
+  .designSkill {
+    background-color: rgb(42, 42, 42);
+    border: 1px solid #ade8f4;
+  }
+
+  .carouselArrow {
+    fill: #ade8f4 !important;
+  }
+
+  #graphicRecentProjects {
+    .headerSpan {
+      color: white;
+    }
+    .top::before,
+    .top::after {
+      background-color: #000000;
+    }
+
+    .projectCardHead {
+      color: #ade8f4;
+    }
+
+    .btn {
+      background-color: #0077b6;
+      color: white;
+    }
+  }
+
+  .designSkillText {
+    .projectCardHead {
+      color: #ade8f4;
+    }
+    .text {
+      color: white;
     }
   }
 
@@ -761,7 +828,7 @@ button {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 95%;
+    /* width: 95%; */
 
     .carouselArrow {
       fill: #2e618e;
@@ -802,6 +869,10 @@ button {
   }
   .designSkillText {
     max-width: calc(100% - 50%);
+
+    .projectCardHead {
+      font-size: x-large;
+    }
   }
   img {
     border-radius: 5px;
@@ -831,7 +902,7 @@ button {
   background: linear-gradient(to right, #0076b675, #023d8a77);
   position: relative;
   border-radius: 10px;
-   border: 1px solid whitesmoke; 
+  border: 1px solid whitesmoke;
 
   * {
     transition: 0.3s all ease-in;
@@ -863,8 +934,7 @@ button {
     color: initial;
     display: block;
     margin: 10px 0;
-
-   }
+  }
 
   .text {
     color: #ffffff;
@@ -877,9 +947,8 @@ button {
 
   .cardText {
     opacity: 1;
-  } 
-} 
-
+  }
+}
 
 .projectCard:hover {
   img {
@@ -890,7 +959,7 @@ button {
     filter: none;
     opacity: 1;
   }
-} 
+}
 
 #projects {
   display: flex;
@@ -898,7 +967,7 @@ button {
   gap: 50px;
   margin-top: 1em;
   flex-wrap: wrap;
-} 
+}
 
 @media (max-width: 1000px) {
   .top {
@@ -957,7 +1026,6 @@ button {
     .top {
       font-size: medium;
     }
-
     .h1Text {
       font-size: xx-large;
     }
@@ -966,6 +1034,60 @@ button {
       width: 400px;
       margin-right: -100px;
     }
+  }
+  /* Graphics */
+  .design-container {
+    align-items: end;
+    div > .designH1 {
+      font-size: 38px;
+    }
+
+    img {
+      height: 400px;
+      margin-right: -100px;
+    }
+
+  }
+
+  .graphicAboutHeader {
+    font-size: xx-large;
+
+  }
+
+  .graphicAboutText {
+    width: 90%;
+  }
+
+  .carouselItem {
+    width: 70%;
+
+    .carouselArrow {
+      height: 50px !important;
+      width: initial !important;
+    }
+  }
+  .designSkill {
+    flex-direction: column;
+    min-height: 560px;
+
+    img {
+      width: 100%;
+    }
+
+    .designSkillText {
+      max-width: 100%;
+
+      .text {
+        margin: 20px auto;
+      }
+    }
+  }
+  .text {
+    margin: 20px auto;
+  }
+
+  .cardText {
+    top: calc(100% / 2.5) !important;
   }
 
   /* about section */
@@ -1031,6 +1153,13 @@ button {
       /* transform: rotate(-20deg); */
     }
   }
+
+  .carouselArrow {
+    display: none;
+  }
+  .iBtn {
+    padding: 0.7em !important;
+  }
 }
 
 @media (max-width: 650px) {
@@ -1071,6 +1200,26 @@ button {
     grid-template-columns: 1fr 1fr;
     justify-self: end;
     column-gap: calc(100% - 70%);
+  }
+
+  .design-container {
+    flex-direction: row;
+    padding-left: 0;
+    padding-top: 3em;
+    align-items: center;
+
+    img {
+      height: 300px;
+ 
+    }
+
+    div > * {
+      text-align: left;
+    }
+  }
+
+  .carouselItem {
+    width: 100% !important;
   }
 }
 
@@ -1171,6 +1320,23 @@ button {
       text-align: center;
     }
   }
+
+  .design-container  {
+
+    flex-direction: column;
+    align-items: center;
+
+    img {
+      height: 350px; 
+    }
+    
+  }
+
+  .design-container > div > *{
+    text-align: center;
+    
+} 
+
 }
 
 @media (max-width: 400px) {
@@ -1191,5 +1357,19 @@ button {
     /* font-size: 5px; */
     text-align: center;
     letter-spacing: 1px;
+  }
+
+
+  .design-container > img {
+height: 250px;
+    
+  }
+
+  .cardText{
+    top: 30px !important;
+
+    .projectCardHead{
+      font-size: larger !important;
+    }
   }
 }
