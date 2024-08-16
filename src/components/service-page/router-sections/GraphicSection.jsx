@@ -1,3 +1,4 @@
+import HeaderCard from "../../snippets/HeaderCard";
 import ProjectCard from "../../snippets/ProjectCard";
 import Carousel from "./Carousel";
 
@@ -5,18 +6,13 @@ const GraphicDesign = () => {
   return (
     <>
       <section id="graphic-design">
-        <div className="design-container">
-          <div>
-            <h1 className="designH1">
-              <span className="comName">SirBconnect: </span>Pioneering
-              Creativity in Graphic Design
-            </h1>{" "}
-            <h3>Where Imagination Meets Innovation</h3>
-          </div>
-
-          <img src="/images/Router/designHead.png" alt="design picture" />
-        </div>
-      </section>
+        <HeaderCard
+          text="Pioneering
+              Creativity in Graphic Design"
+          motto="Where Imagination Meets Innovation"
+          src="/images/Router/designHead.png"
+        />
+        </section>
 
       {/* About Section */}
 
@@ -43,7 +39,7 @@ const GraphicDesign = () => {
         <div className="gSkills"></div>
       </section>
 
-{/* Projects */}
+      {/* Projects */}
       <section id="graphicRecentProjects">
         <h1 className="recentHeader top">
           <span className="headerSpan">Recent Projects</span>

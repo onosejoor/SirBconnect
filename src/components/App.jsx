@@ -3,8 +3,10 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import SirB from "./SirB";
 import Graphics from "./service-page/Graphics";
 import "../index.css";
-import Contact from "./sections/Contact";
-import JobApplication from "./service-page/JobApplication";
+import WebDev from "./service-page/WebDev";
+import Error from "./sections/404";
+import Schorlarship from "./service-page/router-sections/Scholarship";
+
 
 function App() {
   // Get local storage Theme
@@ -79,14 +81,15 @@ function App() {
             element={<SirB dark={dark} set={set} curRef={ref} />}
           />
           <Route
-            path="/job-application"
-            element={<JobApplication dark={dark} set={set} />}
+            path="web-dev"
+            element={<WebDev dark={dark} set={set} />}
           />
           <Route
             path="/graphic-design"
             element={<Graphics dark={dark} set={set} ggg={ref} />}
           />
-          <Route path="*" element={<Contact />} />
+          <Route path="*" element={<Error dark={dark} set={set}/>} />
+          <Route path="schorlarships" element={<Schorlarship dark={dark} set={set}/>} />
         </Routes>
       </BrowserRouter>
     </div>
