@@ -66,7 +66,7 @@ section {
   border-radius: 30px;
   border: 1px solid #023e8a;
   width: fit-content;
-  padding: 0.2em 1em;
+  padding: 0em 1em;
   color: rgb(0, 0, 0);
   font-weight: 400;
   /* margin-left: 1.7em; */
@@ -177,7 +177,7 @@ button {
   /* About section dark mode */
 
   #about {
-    background: linear-gradient(to right, #1b1b1b, transparent);
+    background: linear-gradient(to right, #1b1b1b48, transparent);
 
     .aboutText {
       color: white;
@@ -200,12 +200,16 @@ button {
     border: 1px solid #d3d3d382;
     background-color: #caf0f81a;
     .skillText {
-      color: white;
+      color: #ade8f4;
     }
   }
   .skills:hover {
     background-color: #005fe344;
     box-shadow: 0px 0px 3px white;
+  }
+  .skillTextWrap > .text {
+    text-align: center;
+    color: #ffffff;
   }
 
   /* Reviews */
@@ -623,9 +627,9 @@ button {
   border-radius: 5px;
   background-color: #9eadbe4c;
   transition: all 0.2s ease-out;
-  padding: 1%;
-  min-height: 250px;
   border: 0.5px solid #03055e5b;
+  overflow: hidden;
+  height: 100%;
 }
 
 .skills:hover {
@@ -635,15 +639,22 @@ button {
 
 .skillIMG > img {
   width: 100%;
-  border-radius: 20px;
-  padding: 10px;
-  height: 150px;
+  height: 200px;
+}
+.skillTextWrap {
+  padding: 1em;
+
+  .text {
+    text-align: center;
+    color: #000;
+  }
 }
 
 .skillText {
-  font-size: 20px;
-  font-weight: 400;
+  font-size: x-large;
+  font-weight: 600;
   text-align: center;
+  margin: 10px auto;
 }
 
 /* Services section*/

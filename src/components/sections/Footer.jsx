@@ -30,7 +30,7 @@ function Footer({ routed, ...props }) {
                 <Lists
                   class2="footer-link"
                   text="Home"
-                  link={routed ? "#" : "/"}
+                  link={!routed ? "#" : "/"}
                 />
                 <Lists
                   class2="footer-link"
