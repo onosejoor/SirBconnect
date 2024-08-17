@@ -61,7 +61,7 @@ function Nav({ dark, set, routed }) {
             type="checkbox"
             className="bars"
             viewBox="0 0 50 50"
-            fill="#fff"
+            fill={dark === "false" ? "#001233" : "#fff"}
             width="20px"
             height="20px"
           >

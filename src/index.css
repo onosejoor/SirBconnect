@@ -7,10 +7,7 @@ html {
 
 body {
   transition: all 0.2s ease-in;
-  background-color: #f4f4f4;
-
-  /* background-color: #7e9bb8; */
-  /*lightgray background-image: url("https://www.transparenttextures.com/patterns/az-subtle.png"); */
+  background-color: #ffffff;
 }
 
 /* utility */
@@ -153,7 +150,7 @@ button {
 
   .top {
     color: #ffffff;
-    border: 1px solid white;
+    border: .5px solid white;
     background-color: #0096c7 !important;
   }
   .top::after,
@@ -606,7 +603,7 @@ button {
   margin: 1px auto;
 }
 .counter {
-  color: #03045e;
+  color: #ade8f4;
 }
 
 .aboutText {
@@ -1642,7 +1639,7 @@ button {
   .navBar {
     position: sticky;
     top: 0;
-    background-color: #9ab0c7cb;
+    background-color: #ade8f480;
     padding-top: 1em;
     padding-left: 0.5em;
   }
@@ -1670,9 +1667,9 @@ button {
     }
 
     .top {
-      background-color: #0e6fd7;
-      font-size: 16.5px;
+      font-size: medium;
       margin: 1px auto;
+      font-weight:500;
     }
 
     .head-container {
@@ -1685,7 +1682,7 @@ button {
   }
 
   .top {
-    border: 2px solid #0040ff;
+    border: 2px solid #0096c7;
   }
 
   #about > * {

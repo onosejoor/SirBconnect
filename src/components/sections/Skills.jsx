@@ -32,7 +32,7 @@ function Skills() {
 
   return (
     <section id="services">
-      <h1 className="about">Services</h1>
+      <h1 className="about">What We Offer</h1>
       <div className="arrow"></div>
       <div id="skill">
         <SkillDiv
