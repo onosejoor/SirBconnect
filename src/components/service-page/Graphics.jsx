@@ -7,7 +7,7 @@ import GraphicDesign from "./router-sections/GraphicSection";
 
 // then add this to the function that is called for re-rendering
 
-function Graphics({ dark, set }) {
+function Graphics({ dark, set, route }) {
   useEffect(() => {
     window.scrollTo({
       top: 0,
@@ -16,12 +16,11 @@ function Graphics({ dark, set }) {
     });
   }, []);
 
-
   return (
     <>
-      <Nav dark={dark} routed={true} set={set} />
+      <Nav dark={dark} routed={true} set={set} route={route}/>
       <GraphicDesign />
-      <Contact />
+      <Contact dark={dark}/>
       <Footer routed={true}/>
     </>
   );

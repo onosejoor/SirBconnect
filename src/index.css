@@ -145,7 +145,8 @@ button {
 
   .nav-link:hover {
     color: white;
-    border-bottom: 2px solid #caf0f8;
+  }.nav-link:hover::before{
+    background-color: white;
   }
 
   .top {
@@ -304,13 +305,16 @@ button {
       color: white;
     }
 
-    .svg:hover {
+    .footer-link::before {
+      background-color: #ffffff;
+  }
+
+    .svg:hover,.footer-link:hover  {
       fill: #2672ff;
+      color: #ade8f4;
     }
 
-    .footer-link:hover {
-      color: rgb(56, 56, 255);
-    }
+
 
     .work {
       color: #bdddfe;
@@ -503,11 +507,16 @@ button {
   }
 }
 
-.nav:first-child {
+.nav:first-child, .nav:first-child > .nav-link::before {
   border: 1.5px solid midnightblue;
   padding: 5px 20px;
   border-radius: 5px;
   transition: 0.2s background-color ease-in;
+  content: none; 
+}
+
+.nav{
+  position: relative;
 }
 
 .logo {
@@ -520,12 +529,21 @@ button {
   text-transform: capitalize;
   color: #001233;
   font-size: large;
+}.nav-link::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0%;
+  width: 0%;
+  height: 2px;
+  background-color: #001233;
+  border-radius: 30px;
+  transition: 0.3s all linear;
 }
-
-.nav-link:hover {
+.nav-link:hover, .nav-link:hover::before{
+  width: 100%;
   color: #03045e;
-  border-bottom: 2px solid midnightblue;
-}
+} 
 
 .nav:first-child:hover {
   background-color: yellowgreen;
@@ -603,7 +621,7 @@ button {
   margin: 1px auto;
 }
 .counter {
-  color: #ade8f4;
+  color: #03045e;
 }
 
 .aboutText {
@@ -697,7 +715,7 @@ button {
     color: i;
   } */
   b {
-    font-weight: 200;
+    font-weight: 300;
   }
 }
 
@@ -775,7 +793,7 @@ button {
 .info {
   padding: 10px;
   transition: all 0.3s ease-in;
-  border: 1px solid #acadae;
+  border: 1px solid #4d4d4d;
   border-radius: 3px;
 
   img {
@@ -929,6 +947,27 @@ button {
   padding: 0;
 }
 
+
+
+.footLink > ul >li{
+  position: relative;
+}
+.footer-link:hover::before{
+  width: 100%;
+}
+
+.footer-link::before{
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: #000;
+  left: 0;
+  bottom: 0;
+  transition: all 0.3s linear;
+  border-radius: 30px;
+}
+
 .footer-link,
 .svg {
   fill: #001233;
@@ -937,11 +976,11 @@ button {
 }
 .footLink > ul > li {
   margin-bottom: 10px;
+  width: fit-content;
 }
 
 .footer-link:hover {
-  color: #0000cd;
-  border-bottom: 2px solid white;
+  color: #023e8a;
 }
 
 .workingHours > * {
@@ -1389,7 +1428,7 @@ button {
     right: -100%;
     top: 0px;
     padding: 1em 0.5em;
-    background-color: #489fae;
+    background-color: #48cae4;
     height: 100%;
     width: 300px;
     transition: right 0.2s linear;
@@ -1409,6 +1448,11 @@ button {
   .show {
     right: 0;
     visibility: visible;
+  }
+
+  .nav-link{
+    font-size: larger;
+    font-weight: 500;
   }
 
   /* Hero */
@@ -1649,7 +1693,7 @@ button {
   }
 
   .nav-link {
-    font-size: large;
+    font-size: larger;
   }
 
   .logo {
@@ -1739,6 +1783,7 @@ button {
     * {
       margin-bottom: 5px;
       justify-self: center;
+    margin: auto;
       text-align: center;
     }
   }

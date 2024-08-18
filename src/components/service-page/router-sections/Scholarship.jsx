@@ -8,7 +8,7 @@ function Schorlarship({ set, dark }) {
     <>
       <Nav dark={dark} set={set} routed={true} />
       <SchorlarshipSection />
-      <Contact />
+      <Contact dark={dark}/>
       <Footer dark={dark} set={set} routed={true} />
     </>
   );

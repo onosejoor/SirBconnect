@@ -5,9 +5,9 @@ const ContactCard = (props) => {
       <Link to={props.link}>
         <div className="info">
         {" "}
-        <a href={props.link} className="con">
-          {props.img} {props.text}
-        </a>
+        <div className="con">
+        {props.img} {props.text}
+        </div>
       </div>
       </Link>
 

@@ -17,7 +17,7 @@ function WebDev({ dark, set }) {
     <>
       <Nav dark={dark} routed={true} set={set} />
       <Job />
-      <Contact />
+      <Contact dark={dark}/>
       <Footer dark={dark} routed={true}/>
     </>
   );
