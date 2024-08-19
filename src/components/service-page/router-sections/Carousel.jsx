@@ -33,7 +33,6 @@ const Carousel = () => {
     setCurrentIndex((prevIndex) =>
       prevIndex + 1 === length ? 0 : prevIndex + 1
     );
-    console.log(length);
   };
   const handlePrevious = () => {
     setCurrentIndex((prevIndex) =>
