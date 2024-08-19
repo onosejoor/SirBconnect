@@ -12,9 +12,10 @@ function Skills() {
           url="schorlarships"
           text="At SirBconnect, we understand that finding the right school and scholarship can be challenging. Our scholarship consultation services are designed to help you navigate this process with ease. We provide expert advice and resources to help you identify schools that fit your budget and academic goals. Let us guide you in finding affordable education options and securing the best possible opportunities for your future."
         />
-                <SkillDiv
+        <SkillDiv
           src="/images/skills/graphicDesign.jpg"
           header="Graphic designs and Trainings"
+          
           url="graphic-design"
           text="Transform Your Brand with Stunning Designs!. Our graphic design services bring your vision to life. From logos and brochures to social media graphics and marketing materials, we create visually appealing designs that make your brand stand out."
         />

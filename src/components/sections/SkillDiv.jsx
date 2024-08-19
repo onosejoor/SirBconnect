@@ -5,6 +5,7 @@ const SkillDiv = (props) => {
     <Link
       to={props.url}
       onClick={window.location.reload}
+      
       className="anchorSkill"
     >
       <div className="skills">
