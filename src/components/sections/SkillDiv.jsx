@@ -3,7 +3,8 @@ import { Link } from "react-router-dom";
 const SkillDiv = (props) => {
   return (
     <Link
-      to={`/${props.url}`}
+      to={props.url}
+      onClick={window.location.reload}
       className="anchorSkill"
     >
       <div className="skills">
