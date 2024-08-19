@@ -7,7 +7,6 @@ import WebDev from "./service-page/WebDev";
 import Error from "./sections/404";
 import Schorlarship from "./service-page/router-sections/Scholarship";
 
-
 function App() {
   // Get local storage Theme
   const [dark, setDark] = useState(localStorage.getItem("dark") || "false");
@@ -35,9 +34,8 @@ function App() {
 
   useEffect(() => {
     const urlHash = window.location.hash;
-    
-    if (urlHash.length) {
 
+    if (urlHash.length) {
       const element = document.getElementById(urlHash.substring(1));
       if (element) {
         element.scrollIntoView();
@@ -80,15 +78,15 @@ function App() {
             element={<SirB dark={dark} set={set} curRef={ref} />}
           />
           <Route
-            path="web-dev"
-            element={<WebDev dark={dark} set={set} />}
-          />
-          <Route
             path="graphic-design"
             element={<Graphics dark={dark} set={set} ggg={ref} />}
           />
-          <Route path="*" element={<Error dark={dark} set={set}/>} />
-          <Route path="schorlarships" element={<Schorlarship dark={dark} set={set}/>} />
+          <Route path="web-dev" element={<WebDev dark={dark} set={set} />} />
+          <Route
+            path="schorlarships"
+            element={<Schorlarship dark={dark} set={set} />}
+          />
+          <Route path="*" element={<Error dark={dark} set={set} />} />
         </Routes>
       </BrowserRouter>
     </div>

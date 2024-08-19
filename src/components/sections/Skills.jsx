@@ -1,34 +1,6 @@
-// import { useState } from "react";
 import SkillDiv from "./SkillDiv";
 
 function Skills() {
-  // const [count, setCount] = useState(false);
-  // const target = 200;
-
-  // window.addEventListener("scroll", () => {
-  //   const countElement = document.querySelector(".count");
-  //   const elementTop = countElement.getBoundingClientRect().top;
-
-  //   if (elementTop <= window.innerHeight && !count) {
-  //     setCount((prev) => {
-  //       let interval = setInterval(
-  //         () => {
-
-  //           if (prev !== target) {
-  //             return prev + 1;
-  //           } else {
-  //             clearInterval(interval);
-  //             return prev;
-  //           }
-  //         },
-
-  //         1
-  //       );
-  //     });
-  //   } else{
-  //     return null;
-  //   }
-  // });
 
   return (
     <section id="services">
