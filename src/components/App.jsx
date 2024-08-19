@@ -7,6 +7,9 @@ import WebDev from "./service-page/WebDev";
 import Error from "./sections/404";
 import Schorlarship from "./service-page/router-sections/Scholarship";
 
+console.log(window.location);
+
+
 function App() {
   // Get local storage Theme
   const [dark, setDark] = useState(localStorage.getItem("dark") || "false");

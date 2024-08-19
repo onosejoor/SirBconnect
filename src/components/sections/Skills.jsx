@@ -15,15 +15,8 @@ function Skills() {
         <SkillDiv
           src="/images/skills/graphicDesign.jpg"
           header="Graphic designs and Trainings"
-          
           url="graphic-design"
           text="Transform Your Brand with Stunning Designs!. Our graphic design services bring your vision to life. From logos and brochures to social media graphics and marketing materials, we create visually appealing designs that make your brand stand out."
-        />
-        <SkillDiv
-          src="/images/skills/internet.jpg"
-          header="Internet Services and Research"
-          url="internet-services"
-          text=" SirBconnect offers reliable internet services and comprehensive research solutions. Whether you need high-speed internet for your home or business, or in-depth research for academic or professional projects, we’ve got you covered. Our team ensures you stay connected and have access to the information you need."
         />
 
         <SkillDiv
@@ -31,6 +24,12 @@ function Skills() {
           src="/images/skills/research3.jpg"
           header=" Full-stack Web Development"
           text="Our web development team creates responsive, user-friendly websites tailored to your needs. Enhance your online presence with a professional website from SirBconnect. We specialize in creating websites that are not only visually appealing but also optimized for performance and user experience."
+        />
+        <SkillDiv
+          src="/images/skills/internet.jpg"
+          header="Internet Services and Research"
+          url="internet-services"
+          text=" SirBconnect offers reliable internet services and comprehensive research solutions. Whether you need high-speed internet for your home or business, or in-depth research for academic or professional projects, we’ve got you covered. Our team ensures you stay connected and have access to the information you need."
         />
 
         <SkillDiv
