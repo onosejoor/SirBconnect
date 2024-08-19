@@ -84,7 +84,7 @@ function App() {
             element={<WebDev dark={dark} set={set} />}
           />
           <Route
-            path="/graphic-design"
+            path="graphic-design"
             element={<Graphics dark={dark} set={set} ggg={ref} />}
           />
           <Route path="*" element={<Error dark={dark} set={set}/>} />
