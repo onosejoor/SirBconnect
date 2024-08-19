@@ -44,7 +44,6 @@ function App() {
       }
     }
   }, []);
-
   useEffect(() => {
     const options = {
       root: null,

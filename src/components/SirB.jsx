@@ -15,7 +15,7 @@ function SirB({ set, dark, curRef }) {
       <About current={curRef} />
       <Skills />
       <Reviews />
-      <Contact />
+      <Contact dark={dark}/>
       <Footer dark={dark} />
     </>
   );
