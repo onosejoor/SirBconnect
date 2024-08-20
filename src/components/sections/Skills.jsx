@@ -29,7 +29,7 @@ function Skills() {
           src="/images/skills/internet.jpg"
           header="Internet Services and Research"
           url="internet-services"
-          text=" SirBconnect offers reliable internet services and comprehensive research solutions. Whether you need high-speed internet for your home or business, or in-depth research for academic or professional projects, we’ve got you covered. Our team ensures you stay connected and have access to the information you need."
+          text=" SirBconnect offers reliable internet services and comprehensive research solutions. Whether you need high-speed internet services: Online registration, Data entry, Data capturing, Web management etc, or in-depth research for academic or professional projects, we’ve got you covered. Our team ensures you stay connected and have access to the information you need."
         />
 
         <SkillDiv

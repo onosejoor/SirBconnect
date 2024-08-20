@@ -9,7 +9,7 @@ const ProjectCard = (props) => {
           <h3 className="projectCardHead">{props.header}</h3>
           <p className="text">{props.text}</p>
 
-          <Link to={"https://wa.me/+2347030953448/?text=Lets%20work%20together"}  onClick={window.location.reload}>
+          <Link to={"#contact"}  onClick={window.location.reload}>
           <button className="contact btn">  Get In Touch  </button>{" "}
         </Link>
         </div>

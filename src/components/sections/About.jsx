@@ -27,8 +27,8 @@ const About = ({ current }) => {
         <h1 className="about">Who are we?</h1>
 
         <p className="aboutText">
-          We are a premier internet research company dedicated to providing
-          comprehensive, accurate information solutions and actionable research.
+          We are a premier ICT and research company dedicated to providing
+          comprehensive, accurate information solutions and actionable research services.
           🧑‍💻
         </p>
 
