@@ -11,7 +11,7 @@ const Ceo = ({ dark }) => {
           </div>
 
           <div className="ceoText">
-            <h1>Meet Our CEO</h1>
+            <h1 className="ceoH1">Meet Our CEO</h1>
             <br />
 
             <div className="break">

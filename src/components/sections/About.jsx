@@ -24,12 +24,17 @@ const About = ({ current }) => {
   return (
     <>
       <section id="about">
-        <h1 className="about">Who are we?</h1>
+        <h1 className="about">
+          <span>
+            <img src="/images/icons/team.svg" alt="team svg icon" />{" "}
+          </span>{" "}
+          Who are we?
+        </h1>
 
         <p className="aboutText">
           We are a premier ICT and research company dedicated to providing
-          comprehensive, accurate information solutions and actionable research services.
-          🧑‍💻
+          comprehensive, accurate information solutions and actionable research
+          services. 🧑‍💻
         </p>
 
         <h2 className="count top">
@@ -37,7 +42,7 @@ const About = ({ current }) => {
           With over {"  "}
           <span className="counter">{count}</span>
           {"  "}
-          researches{" "} conducted
+          researches conducted
         </h2>
       </section>
     </>

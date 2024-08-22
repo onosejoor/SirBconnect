@@ -1,13 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
+:root{
+  --contactBlue: #002466;
+}
+
 html {
   scroll-behavior: smooth;
 }
 
 body {
   transition: all 0.2s ease-in;
-  background-color: #ffffff;
+  background-color: rgb(242, 242, 242);
+  background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
+  /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
 }
 
 /* utility */
@@ -16,7 +22,7 @@ body {
   box-sizing: border-box;
   margin: 0;
   padding: 0%;
-  color: #001233;
+  color: #151718;
 }
 
 button {
@@ -59,14 +65,14 @@ section {
 
 .top {
   text-align: left;
-  background: #0095c77b;
+  background: rgba(255, 255, 255, 0.605);
   border-radius: 30px;
-  border: 1px solid #023e8a;
+  border: 1px solid rgba(255, 255, 255, 0.605);
   width: fit-content;
-  padding: 0em 1em;
+  padding: 0.1em 1em;
   color: rgb(0, 0, 0);
-  font-weight: 400;
-  /* margin-left: 1.7em; */
+  font-weight: 500;
+  box-shadow: 0px 0px 5px 0px gray;
   margin-bottom: 10px;
 }
 
@@ -464,7 +470,7 @@ button {
   justify-content: space-between;
   padding: 1.3em;
   padding-top: 1.8em;
-  padding-left: 1.7em;
+  padding-left: 1em;
   align-items: center;
   border-bottom: 1px solid #0040ff;
 
@@ -472,6 +478,7 @@ button {
     display: flex;
     gap: 20px;
     align-items: center;
+    padding-left: 1em;
   }
 
   .navCon {
@@ -521,7 +528,7 @@ button {
 }
 
 .logo {
-  padding-left: 2em;
+  padding-left: 1.2em;
 }
 
 .nav-link {
@@ -545,21 +552,25 @@ button {
 .nav-link:hover,
 .nav-link:hover::before {
   width: 100%;
-  color: #03045e;
+  color: #001233;
 }
 
 .nav:first-child:hover {
-  background-color: yellowgreen;
+  background-color: #2d3133;
+
+  .nav-link:first-child {
+    color: white;
+  }
 }
 
 /* Header section */
 
 .header {
   display: flex;
-  gap: 20px;
+  /* gap: 20px; */
   justify-content: space-between;
   align-items: center;
-  margin-left: 2em;
+  margin-left: 1.5em;
 
   .headerIMG {
     width: fit-content;
@@ -568,27 +579,28 @@ button {
 
   .h1Text {
     font-size: 45px;
-    color: #001233;
-    /* color: black; */
+    font-weight: 700;
+    text-transform: capitalize;
     padding: 10px 0;
-    /* padding-left: 1em; */
-    /* font-family: "Roboto", sans-serif; */
+    line-height: 1.5em;
+      color: rgb(21 23 24 / 1);
   }
 }
 
 .comName {
-  color: #001f9a;
+  color: #002466;
 }
 
 .contact {
   padding: 1em;
-  background: #0096c7;
+  color: #fff;
+  background: var(--contactBlue);
   border: none;
   border-radius: 5px;
   font-size: medium;
   font-weight: 500;
-  border: 0.5px solid blue;
   margin: 1px auto;
+  box-shadow: 0px 0px 5px 0px rgb(141, 141, 141);
 }
 
 .contact::after,
@@ -597,26 +609,33 @@ button {
   display: inline-block;
   width: 10px;
   height: 10px;
-  background-color: #ffffff;
+  background-color: #fff;
   border-radius: 50%;
 }
 
 /* About section */
 #about {
-  margin-bottom: 0;
+  /* margin-bottom: 0; */
   text-align: center;
-  /* background: linear-gradient(106deg, hsl(211, 16%, 63%), transparent); */
   background: linear-gradient(106deg, hsla(0, 0%, 91%, 0.495), transparent);
-
-  /* .top {
-    background: #6b9aa4;
-  } */
 }
 .about {
   font-size: xxx-large;
-  color: #023e8a;
   padding: 0.2em;
   text-align: center;
+  display: flex;
+  align-items: flex-start;
+  width: fit-content;
+  margin: auto;
+
+  span{
+    display: flex;
+    align-self: center;
+
+    img{
+      height: 60px;
+    }
+  }
 }
 
 .count {
@@ -625,7 +644,7 @@ button {
   margin: 1px auto;
 }
 .counter {
-  color: #03045e;
+  color: var(--contactBlue);
 }
 
 .aboutText {
@@ -633,6 +652,8 @@ button {
   margin: 10px auto;
   width: 65%;
 }
+
+/* Services */
 
 #skill {
   display: flex;
@@ -644,16 +665,17 @@ button {
 .skills {
   width: 300px;
   border-radius: 5px;
-  background-color: #9eadbe4c;
+  background-color:rgba(236, 236, 236, 0.457) ;
+
   transition: all 0.2s ease-out;
-  border: 0.5px solid #03055e5b;
+  border: 0.5px solid #2d31333b;
   overflow: hidden;
   height: 100%;
 }
 
 .skills:hover {
   box-shadow: 0px 0px 10px #797e82;
-  border-color: #005ee3;
+  border-color: white;
 }
 
 .skillIMG > img {
@@ -665,7 +687,7 @@ button {
 
   .text {
     text-align: center;
-    color: #000;
+color: rgb(47 47 49 / 1);
   }
 }
 
@@ -678,46 +700,39 @@ button {
 
 /* CEO Section */
 
-#CEO{
-  padding-top: 5em;
-  background: linear-gradient(to bottom, #ade8f428, #ade8f4, #ade8f428);
+#CEO {
+background: linear-gradient(transparent,hsl(0, 0%, 90%));
 }
 
-.ceo-container{
+.ceo-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 80%;
   margin: 1em auto;
 }
-.ceoImg{
+.ceoImg {
   width: 300px;
 
-  img{
+  img {
     border-radius: 10px;
-    width:100%;
+    width: 100%;
     height: 300px;
     box-shadow: 0px 0px 10px 5px rgb(128, 128, 128);
   }
 }
-.break{
 
-  /* background-image: url(/images/icons/bg-pattern-quotation.svg); */
-  /* width: 50px; */
-  /* display: block; */
-  /* height: 30px; */
-  /* background-size: contain;
-  background-repeat: no-repeat; */
+.ceoH1{
+  margin-bottom: 10px;
+  font-size: 3em;
+  letter-spacing: 0.4px;
+  color: #3B3B3B;
 }
-.ceoText{
+
+.ceoText {
   width: 50%;
 
-  h1{
-    font-size: 2em;
-  margin-bottom: 10px;
-  }
-
-  p{
+  p {
     font-size: large;
   }
 }
@@ -817,7 +832,6 @@ button {
     width: 130px;
     border-radius: 50%;
     border: 3px solid;
-    
   }
 }
 
@@ -1498,6 +1512,18 @@ button {
   color: #000;
 }
 
+@media (min-width: 1280px) {
+  .container {
+    margin: auto;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+
 @media (max-width: 1000px) {
   .top {
     font-size: 19px;
@@ -1736,7 +1762,7 @@ button {
     } */
   }
 
-  #staff >   .h1Text {
+  #staff > .h1Text {
     width: 100%;
   }
 
@@ -1790,6 +1816,7 @@ button {
     background-color: #ade8f480;
     padding-top: 1em;
     padding-left: 0.5em;
+    /* backdrop-filter: blur(12px); */
   }
 
   .logoContainer > h4 {
