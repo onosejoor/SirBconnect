@@ -42,26 +42,28 @@ function Footer({ routed, ...props }) {
                   text="About"
                   link={routed ? "/#about" : "#about"}
                 />
-                <Lists
-                  class2="footer-link"
-                  text="Contact"
-                  link={routed ? "/#contact" : "#contact"}
-                />
-                <Lists
+                <Lists class2="footer-link" text="Contact" link="#contact" />
+
+                {/* <Lists
                   class2="footer-link"
                   text="Reviews"
                   link={routed ? "/#reviews" : "#reviews"}
-                />
+                /> */}
               </ul>
             </div>
           </div>
           <div className="foot workingHours">
             <h3 className="footHead">Working Hours</h3>
-            <p className="work">Weekdays</p>
-            <b>8am - 6pm</b>
-            <br />
-            <p className="work">Weekends</p>
-            <b>10am - 5pm</b>
+            <div className="workHours">
+              {" "}
+              <b className="work">Weekdays</b>
+              <p>8am - 6pm</p>
+            </div>
+            <div className="workHours">
+              {" "}
+              <b className="work">Weekends</b>
+              <p>10am - 5pm</p>
+            </div>
           </div>
           <div className="foot">
             <div id="svg-container">
