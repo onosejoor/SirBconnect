@@ -41,7 +41,6 @@ const Carousel = () => {
   };
 
   function log(e) {
-    console.log(e.target);
     setCurrentIndex(parseInt(e.target.id));
   }
 

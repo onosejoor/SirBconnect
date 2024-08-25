@@ -4,7 +4,9 @@
 :root {
   --contactBlue: #002466;
   --originBlur: rgb(21 23 24 / 0.9);
-  --originGray: rgb(21 23 24);
+  --originBlurry: rgb(21 23 24 / 0.2);
+  --originGray: #151718;
+  --opacityBlue: rgb(0 36 102 / 80%);
 }
 
 html {
@@ -665,7 +667,11 @@ button {
 /* CEO Section */
 
 #CEO {
-  background: linear-gradient(transparent, hsl(219 100% 20% / 0.12));
+  background-image: linear-gradient(
+    transparent,
+    hsl(219 100% 20% / 0.2),
+    transparent
+  );
 }
 
 .ceo-container {
@@ -768,7 +774,7 @@ button {
   }
 
   .contact {
-    background-color: rgba(21 23 24/ 0.9);
+    background-color: var(--opacityBlue);
   }
 }
 
@@ -814,6 +820,11 @@ button {
 
 /* What's New section */
 
+.category{
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
 .whatsNewCardWrapper {
   display: flex;
   gap: 50px;
@@ -830,12 +841,13 @@ button {
   display: flex;
   width: 550px;
   gap: 20px;
-  background: rgb(255 255 255 / 63%);
+  background: rgb(255 255 255 / 90%);
   height: 300px;
   align-items: center;
   overflow: hidden;
   border-radius: 3px;
   box-shadow: 0px 0px 15px 1px gray;
+  transition: 0.2s all linear;
 }
 
 .whatsNewImg {
@@ -848,8 +860,13 @@ button {
   }
 }
 
+.expand{
+  width: 95%;
+  height: fit-content;
+}
+
 .whatsNewTextCon {
-  padding: 0em 1em 1em 1em;
+  padding: 1em;
   line-height: 1.6;
   display: flex;
   flex-direction: column;
@@ -859,12 +876,16 @@ button {
 .whatsNewLink {
   width: fit-content;
   position: relative;
+}
 
-  button {
-    font-size: medium;
-    background: none;
-    color: var(--contactBlue);
-  }
+.linkButton {
+  font-size: medium;
+  background: none;
+  color: var(--contactBlue);
+}
+.linkButton:hover{
+  color: #000;
+  background: none;
 }
 
 .linkButton:hover::before {
@@ -889,10 +910,13 @@ button {
 
 .whatsNewHeaderText {
   opacity: 0.9;
+  margin-bottom: 5px;
 }
 
 .whatsNewText {
+  padding: 10px;
   opacity: 0.85;
+  padding-left: 0;
 }
 
 .whatsNewDivContainer {
@@ -900,6 +924,10 @@ button {
   padding: 1em;
   margin: auto;
   margin-bottom: 2em;
+
+  .top {
+    background-color: #fff;
+  }
 }
 
 .whatsNewH1 {
@@ -908,6 +936,8 @@ button {
   gap: 5px;
   width: fit-content;
   margin: auto;
+  color: #001233;
+  margin-bottom: 15px;
 
   span > img {
     height: 40px;
@@ -915,6 +945,12 @@ button {
 }
 
 /* Review Section */
+
+#reviews {
+  padding: 3em;
+  /* background-color: #f9fcff; */
+  background-image: linear-gradient(147deg, #f9fcff 10%, #dee4ea 74%, transparent);
+}
 
 #reviewWrapper {
   display: flex;
@@ -931,15 +967,16 @@ button {
 .reviewCard {
   width: 320px;
   padding: 1em;
-  background-color: hsl(219 100% 20% / 0.2);
+  /* background-color: hsla(0, 0%, 84%, 0.12); */
+
   border-radius: 10px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   transition: all 0.2s ease-in;
-  border: 1px solid darkgray;
+  /* border: 1px solid darkgray; */
   /* height: fit-content; */
-  box-shadow: 0px 0px 10px 5px #58585886;
+  box-shadow: 0px 0px 5px 5px #58585886;
   img {
     height: 100px;
     width: 100px;
