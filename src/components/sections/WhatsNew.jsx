@@ -15,7 +15,7 @@ const WhatsNew = () => {
             </span>{" "}
             What&apos;s New
           </h2>
-          <p className="whatsNewHeaderText top">
+          <p className="whatsNewHeaderText">
             Find out the latest updates and innovations on SirBconnect
           </p>
         </div>

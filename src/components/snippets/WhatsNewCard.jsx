@@ -25,9 +25,11 @@ const WhatsNewCard = ({ header, text, src, text2, category }) => {
         <div className="whatsNewTextCon">
           <div>
             {" "}
-            <h5 className="whatsNewDate">
-              23-August-2024 | <span className="category">{category}</span>
-            </h5>
+            <div className="date">
+              {" "}
+              <h5 className="whatsNewDate">23-August-2024 | </h5>
+              <span className="category">{category}</span>
+            </div>
           </div>
           <div>
             {" "}

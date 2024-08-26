@@ -7,6 +7,7 @@
   --originBlurry: rgb(21 23 24 / 0.2);
   --originGray: #151718;
   --opacityBlue: rgb(0 36 102 / 80%);
+  --lightBlue: #ade8f4;
 }
 
 html {
@@ -69,6 +70,7 @@ section {
 
 .top {
   text-align: left;
+
   background: rgba(255, 255, 255, 0.605);
   border-radius: 30px;
   border: 1px solid rgba(255, 255, 255, 0.605);
@@ -148,7 +150,7 @@ button {
   }
 
   .nav-link {
-    color: #caf0f8;
+    color: #e0e0e0;
   }
 
   .logoContainer > * {
@@ -164,12 +166,11 @@ button {
 
   .top {
     color: #ffffff;
-    border: 0.5px solid white;
-    background-color: #0096c7 !important;
+    background-color: #000000 !important;
   }
   .top::after,
   .top::before {
-    background-color: #000f1a;
+    background-color: #ffffff;
   }
 
   .contact {
@@ -178,7 +179,7 @@ button {
   /* Header */
 
   .h1Text {
-    color: white !important;
+    color: hsl(0 0% 100% /.95) !important;
 
     .comName {
       color: #0077b6 !important;
@@ -202,6 +203,19 @@ button {
     color: #ade8f4;
   }
 
+  .counter {
+    color: var(--lightBlue);
+  }
+
+  /* CEO */
+
+  .ceoH1 {
+    color: var(--lightBlue);
+  }
+  .ceo-container p {
+    color: hsl(0 0% 100% / 0.8);
+  }
+
   /* Services */
   .arrow {
     background-image: url(/images/curved-arrow-white.svg);
@@ -215,30 +229,97 @@ button {
     }
   }
   .skills:hover {
-    background-color: #005fe344;
-    box-shadow: 0px 0px 3px white;
+    box-shadow: 0px 0px 10px 0px rgba(255, 255, 255, 0.726);
   }
   .skillTextWrap > .text {
     text-align: center;
-    color: #ffffff;
+    color: hsl(0 0% 100% / 0.8);
+  }
+
+  /* Staffs */
+
+  .staff {
+    background-color: #31313177;
+    box-shadow: 0px 0px 10px 0px rgba(255, 255, 255, 0.466);
+  }
+
+  .staffImg > img {
+    border: 3px solid hsl(0 0% 100% / 0.8);
+  }
+
+  .staffName {
+    color: var(--lightBlue);
+  }
+
+  .staffTextContainer > .staffText {
+    color: rgba(255, 255, 255, 0.9);
+  }
+
+  .staffPosition {
+    color: var(--lightBlue);
+    opacity: .8;
+  }
+
+  a[href="/staffs"] {
+    .contact::after,
+    .contact::before {
+      background-color: #000;
+    }
+  }
+
+  .staffMore {
+    background-color: white !important;
+    color: black;
+  }
+
+  /* What's More */
+
+  .whatsNewContainer{
+    background-color: #111111;
+  }
+
+  .whatsNewH1 {
+    color: var(--lightBlue);
+  }
+
+
+  .category{
+    color: var(--lightBlue);
+  }
+
+  .whatsNewTextCon > div > *{
+    color: white;
+  }
+
+  .whatsNewDate{
+    color: white;
+  }
+
+  .linkButton,.linkButton:hover{
+    color: white;
+  }.linkButton::before{
+    background-color: var(--lightBlue);
+    opacity: .8;
   }
 
   /* Reviews */
+  #reviews{
+    background-image: none;
+  }
   .reviewCard {
     background-color: #2f415430;
     outline: 1px solid #a4a4a4;
+    box-shadow: 0px 0px 10px 0px rgba(255, 255, 255, 0.653);
 
     .reviewText {
       color: white;
+      opacity: .8.5;
     }
 
     .reviewer,
     b {
       color: #caf0f8;
     }
-  }
-  .reviewCard:hover {
-    background-color: #023e8a;
   }
 
   /* Contact */
@@ -462,16 +543,14 @@ button {
       background-color: transparent;
     }
   }
-  @media (max-width: 900px) {
-    .nav-link:hover {
-      border-bottom: 2px solid rgb(255, 255, 255);
-    }
-  }
 }
 
 /* Nav bar */
 
 .navBar {
+position: sticky;
+
+top: 0;
   display: flex;
   justify-content: space-between;
   padding: 1.3em;
@@ -500,6 +579,7 @@ button {
     padding-right: 1%;
     cursor: pointer;
     align-items: center;
+    backdrop-filter: blur(10px);
   }
 
   a[href="/"] {
@@ -653,6 +733,10 @@ button {
   font-style: italic;
   font-weight: 400;
   margin: 1px auto;
+}
+
+#about > .top {
+display: block;
 }
 .counter {
   color: var(--contactBlue);
@@ -811,7 +895,7 @@ button {
 }
 
 .staffTextContainer {
-  padding: 1em;
+ padding: 1em;
 
   .staffText {
     color: rgb(47 47 49 / 0.95);
@@ -820,9 +904,11 @@ button {
 
 /* What's New section */
 
-.category{
+.category {
   font-weight: 600;
   text-transform: uppercase;
+  color: var(--contactBlue);
+  font-size: 0.9em;
 }
 
 .whatsNewCardWrapper {
@@ -832,11 +918,17 @@ button {
   justify-content: center;
 }
 
+.date{
+  display: flex;
+  gap: 10px;
+}
+
 .whatsNewDate {
   word-spacing: 10px;
   color: rgb(21 23 24 / 0.7);
-}
-
+  font-size: 0.9em;
+  opacity: .8;
+}  
 .whatsNewContainer {
   display: flex;
   width: 550px;
@@ -860,7 +952,7 @@ button {
   }
 }
 
-.expand{
+.expand {
   width: 95%;
   height: fit-content;
 }
@@ -883,7 +975,7 @@ button {
   background: none;
   color: var(--contactBlue);
 }
-.linkButton:hover{
+.linkButton:hover {
   color: #000;
   background: none;
 }
@@ -911,6 +1003,8 @@ button {
 .whatsNewHeaderText {
   opacity: 0.9;
   margin-bottom: 5px;
+  text-align: center;
+  font-weight: 500;
 }
 
 .whatsNewText {
@@ -949,7 +1043,12 @@ button {
 #reviews {
   padding: 3em;
   /* background-color: #f9fcff; */
-  background-image: linear-gradient(147deg, #f9fcff 10%, #dee4ea 74%, transparent);
+  background-image: linear-gradient(
+    147deg,
+    #f9fcff 10%,
+    #dee4ea 74%,
+    transparent
+  );
 }
 
 #reviewWrapper {
@@ -976,7 +1075,7 @@ button {
   transition: all 0.2s ease-in;
   /* border: 1px solid darkgray; */
   /* height: fit-content; */
-  box-shadow: 0px 0px 5px 5px #58585886;
+  box-shadow: 0px 0px 5px 1px #58585886;
   img {
     height: 100px;
     width: 100px;
@@ -1727,6 +1826,21 @@ button {
       margin-right: -100px;
     }
   }
+
+  /* CEO */
+
+  .ceo-container {
+    width: 100%;
+
+    p {
+      font-size: medium;
+    }
+  }
+
+  .ceoH1 {
+    font-size: xx-large;
+  }
+
   /* Graphics */
   .design-container {
     align-items: end;
@@ -1856,6 +1970,25 @@ button {
       font-size: 24px;
     }
   }
+
+  .ceoImg {
+    width: 250px;
+    height: 250px;
+
+    img {
+      height: 100%;
+    }
+  }
+  .ceo-container {
+    p {
+      font-size: medium;
+    }
+  }
+
+  .ceoH1 {
+    font-size: xx-large;
+  }
+
   .contact-container {
     flex-direction: column;
     width: fit-content;
@@ -1983,12 +2116,11 @@ button {
     }
   }
 
-  .top {
-    border: 2px solid #0096c7;
-  }
-
   .about {
     flex-direction: column;
+  }
+  .aboutText{
+    width: 100%;
   }
 
   #about > * {
@@ -1996,7 +2128,6 @@ button {
   }
   .count {
     font-size: larger;
-    border: 2px solid #0040ff;
   }
   .count::before,
   .contact::before {
@@ -2005,6 +2136,31 @@ button {
   .count::after,
   .contact::after {
     margin-left: 10px;
+  }
+
+  #CEO {
+    background-image: linear-gradient(transparent, #15171822 60%);
+  }
+  .ceo-container {
+    flex-direction: column;
+
+    p {
+      font-size: small;
+    }
+  }
+
+  .ceoText {
+    width: 100%;
+    padding: 1.5em;
+    text-align: center;
+  }
+
+  .ceoImg {
+    width: 100%;
+
+    img {
+      box-shadow: none;
+    }
   }
 
   .arrow {
@@ -2016,6 +2172,20 @@ button {
 
   .skills {
     width: 310px;
+  }
+
+  .whatsNewContainer{
+    flex-direction: column;
+    height: fit-content;
+    width: 300px;
+  }
+
+  .whatsNewImg{
+    height: 250px;
+  }
+
+  #staff > .h1Text {
+font-size: x-large;
   }
 
   .contact-container {
