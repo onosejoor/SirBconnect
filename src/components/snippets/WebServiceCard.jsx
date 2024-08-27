@@ -1,15 +1,15 @@
-const WebServiceCard = (props) => {
+const WebServiceCard = ({src, header, text, classname}) => {
   return (
     <>
-      <div className="webCard">
+      <div className={!classname ? "webCard" : `webCard ${classname}`}>
         <div>
-          <img className="webServiceImg" src={props.src} alt={props.header} />
+          <img className="webServiceImg" src={src} alt={header} />
         </div>
 
         <div className="webServiceText">
-          <h2 className="webServiceh2">{props.header}</h2>
+          <h2 className="webServiceh2">{header}</h2>
           <br />
-          <p className="webText">{props.text}</p>
+          <p className="webText">{text}</p>
         </div>
       </div>
     </>

@@ -45,7 +45,7 @@ const WhatsNewCard = ({ header, text, src, text2, category }) => {
             <button className="linkButton">Contact Us</button>
           </a> */}
           <button className="linkButton whatsNewLink" onClick={setSee}>
-            See more.....
+           {seeMore ? "See Less"  : "See more"}
           </button>
         </div>
       </div>

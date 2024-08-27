@@ -33,8 +33,7 @@ function SchorlarshipSection() {
         <h2 className="top">Services We Render</h2>
 
         <div className="service-container">
-
-        <ScholarshipServiceCard
+          <ScholarshipServiceCard
             // src="/images/Router/Services/SEO.png"
             text="Understanding financial aid options can be complex. SirBconnect offers personalized financial aid counseling to help you navigate this landscape. Our counselors will work with you to identify all available financial aid opportunities, including scholarships, grants, and loans."
             header="Financial Aid Counseling"

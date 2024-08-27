@@ -8,7 +8,7 @@ const ReviewCard = (props) => {
         <br />
         <div className="revImgWrap">
           <img src={props.src} alt="Avatar" loading="lazy"/>
-          <br />
+          {/* <br /> */}
           <div>
             <h3 className="reviewer">{props.name}</h3>
             <b>{props.role}</b>

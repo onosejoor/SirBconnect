@@ -15,6 +15,7 @@ const HeaderCard = (props) => {
       </div>
 
       <img
+        className={props.class2 ? "headerImage" : null}
         src={props.src || "/images/Router/designHead.png"}
         alt="design picture"
       />

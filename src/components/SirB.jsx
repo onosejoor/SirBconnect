@@ -14,7 +14,7 @@ function SirB({ set, dark, curRef }) {
     <>
       <Nav set={set} dark={dark} />
       <Header />
-      <About current={curRef} />
+      <About current={curRef} dark={dark}/>
       <Ceo dark={dark} />
       <Skills />
       <MeetStaff />

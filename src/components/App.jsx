@@ -7,6 +7,7 @@ import WebDev from "./service-page/WebDev";
 import Error from "./sections/404";
 import Schorlarship from "./service-page/router-sections/Scholarship";
 import StaffsRouterComponent from "./service-page/router-sections/StaffsRouter";
+import Research from "./service-page/router-sections/Research";
 
 console.log(window.location);
 
@@ -89,7 +90,8 @@ function App() {
             path="schorlarships"
             element={<Schorlarship dark={dark} set={set} />}
           />
-          <Route path="staffs" element={<StaffsRouterComponent dark={dark} set={set} />} />
+          <Route path="staffs" element={<StaffsRouterComponent dark={dark} set={set} />} /> 
+          <Route path="researches" element={<Research dark={dark} set={set} />} />
           <Route path="*" element={<Error dark={dark} set={set} />} />
         </Routes>
       </BrowserRouter>

@@ -10,7 +10,7 @@ const AboutText = (props) => {
         className={props.class}
           loading="lazy"
           src={props.src}
-          alt="Computer with a HTML, CSS, AND JAVASCRIPT write-up"
+          alt="SirBconnect"
         />
     </>
   );

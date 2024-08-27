@@ -63,6 +63,9 @@ section {
   position: relative;
   z-index: -1;
 }
+.margin {
+  margin: 2em auto !important;
+}
 .view {
   transform: translateY(0px);
   opacity: 1;
@@ -70,6 +73,8 @@ section {
 
 .top {
   text-align: left;
+  display: flex;
+  align-items: center;
 
   background: rgba(255, 255, 255, 0.605);
   border-radius: 30px;
@@ -146,7 +151,7 @@ button {
     background: linear-gradient(to right, #1f1f1f7b, #000f1a88);
   }
   .nav-items {
-    background-color: #395169;
+    background-color: var(--opacityBlue);
   }
 
   .nav-link {
@@ -179,7 +184,7 @@ button {
   /* Header */
 
   .h1Text {
-    color: hsl(0 0% 100% /.95) !important;
+    color: hsl(0 0% 100% /0.95) !important;
 
     .comName {
       color: #0077b6 !important;
@@ -198,6 +203,9 @@ button {
     .top {
       background-color: #023e8a;
     }
+  }
+  .count {
+    color: white;
   }
   .about {
     color: #ade8f4;
@@ -257,7 +265,7 @@ button {
 
   .staffPosition {
     color: var(--lightBlue);
-    opacity: .8;
+    opacity: 0.8;
   }
 
   a[href="/staffs"] {
@@ -274,7 +282,7 @@ button {
 
   /* What's More */
 
-  .whatsNewContainer{
+  .whatsNewContainer {
     background-color: #111111;
   }
 
@@ -282,28 +290,32 @@ button {
     color: var(--lightBlue);
   }
 
-
-  .category{
+  .category {
     color: var(--lightBlue);
   }
 
-  .whatsNewTextCon > div > *{
+  .whatsNewTextCon > div > * {
     color: white;
   }
 
-  .whatsNewDate{
+  .whatsNewDate {
+    color: white;
+  }
+  .whatsNewHeaderText {
     color: white;
   }
 
-  .linkButton,.linkButton:hover{
+  .linkButton,
+  .linkButton:hover {
     color: white;
-  }.linkButton::before{
+  }
+  .linkButton::before {
     background-color: var(--lightBlue);
-    opacity: .8;
+    opacity: 0.8;
   }
 
   /* Reviews */
-  #reviews{
+  #reviews {
     background-image: none;
   }
   .reviewCard {
@@ -313,7 +325,7 @@ button {
 
     .reviewText {
       color: white;
-      opacity: .8.5;
+      opacity: 0.8.5;
     }
 
     .reviewer,
@@ -385,8 +397,11 @@ button {
       color: #caf0f8;
     }
 
-    b {
+     b {
       color: white;
+    }
+    .workHours >p{
+      color: rgba(255, 255, 255, 0.776);
     }
 
     .footHead {
@@ -497,8 +512,9 @@ button {
   }
 
   .webCard {
-    background-color: #000f1a;
+    background-color: var(--originBlurry);
     border-color: #ade8f4;
+    box-shadow: 0PX 0PX 5PX 0PX white;
   }
 
   .webServiceText {
@@ -507,7 +523,7 @@ button {
     }
 
     .webText {
-      color: white;
+      color: rgba(255, 255, 255, 0.89);
     }
   }
 
@@ -538,6 +554,16 @@ button {
     color: #ffffff;
   }
 
+  /* Research */
+
+  .researchAboutHeader{
+    color: var(--lightBlue);
+  }
+
+  .researchAboutText{
+    color: white;
+  }
+
   @media (min-width: 801px) {
     .nav-items {
       background-color: transparent;
@@ -548,9 +574,7 @@ button {
 /* Nav bar */
 
 .navBar {
-position: sticky;
-
-top: 0;
+  top: 0;
   display: flex;
   justify-content: space-between;
   padding: 1.3em;
@@ -579,7 +603,6 @@ top: 0;
     padding-right: 1%;
     cursor: pointer;
     align-items: center;
-    backdrop-filter: blur(10px);
   }
 
   a[href="/"] {
@@ -709,6 +732,10 @@ top: 0;
   text-align: center;
   background: linear-gradient(106deg, hsla(0, 0%, 91%, 0.495), transparent);
 }
+
+div.top {
+  margin: 1px auto;
+}
 .about {
   font-size: xxx-large;
   padding: 0.2em;
@@ -717,6 +744,7 @@ top: 0;
   align-items: flex-start;
   width: fit-content;
   margin: auto;
+  gap: 10px;
 
   span {
     display: flex;
@@ -732,12 +760,8 @@ top: 0;
 .count {
   font-style: italic;
   font-weight: 400;
-  margin: 1px auto;
 }
 
-#about > .top {
-display: block;
-}
 .counter {
   color: var(--contactBlue);
 }
@@ -895,7 +919,7 @@ display: block;
 }
 
 .staffTextContainer {
- padding: 1em;
+  padding: 1em;
 
   .staffText {
     color: rgb(47 47 49 / 0.95);
@@ -918,7 +942,7 @@ display: block;
   justify-content: center;
 }
 
-.date{
+.date {
   display: flex;
   gap: 10px;
 }
@@ -927,8 +951,8 @@ display: block;
   word-spacing: 10px;
   color: rgb(21 23 24 / 0.7);
   font-size: 0.9em;
-  opacity: .8;
-}  
+  opacity: 0.8;
+}
 .whatsNewContainer {
   display: flex;
   width: 550px;
@@ -1629,23 +1653,28 @@ display: block;
   transition: all 0.3s ease-in;
 }
 .webCard:hover {
-  box-shadow: 0px 0px 10px 3px #586b7e;
+  box-shadow: 0px 0px 14px 0px #586b7e;
 }
 
 .webServiceImg {
   border-radius: 50%;
-  height: 100px;
+  height: 120px;
+  width: 150px;
 }
 
 .webServiceh2 {
   text-align: center;
-  color: #000000;
+  color: var(--opacityBlue);
   font-size: 2em;
 }
 
 .webServiceText {
   font-size: 1.09em;
   text-align: center;
+}
+
+p.webText {
+  opacity: 0.82;
 }
 
 /* Error 404 page */
@@ -1738,6 +1767,37 @@ display: block;
   color: #000;
 }
 
+/* Research Section */
+
+img.headerImage {
+  height: 360px;
+}
+.researchAboutHeader{
+  font-size: xx-large;
+  text-align: center;
+  color: var(--originBlur);
+}
+
+.researchAboutText {
+  font-weight: 400;
+  font-size: larger;
+  text-align: center;
+  width: 70%;
+  margin:1em auto;
+}
+
+.researchServiceCard{
+  width: 280px;
+}
+
+.researchServiceContainer{
+  padding: 1.5em;
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
 @media (min-width: 1280px) {
   .container {
     margin: auto;
@@ -1780,11 +1840,12 @@ display: block;
     right: -100%;
     top: 0px;
     padding: 1em 0.5em;
-    background-color: #48cae4;
+    background-color: white;
     height: 100%;
     width: 300px;
     transition: right 0.2s linear;
     align-items: baseline !important;
+    backdrop-filter: blur(10px);
 
     .nav {
       margin-left: 50px;
@@ -1928,6 +1989,7 @@ display: block;
       display: flex;
       gap: 10px;
       align-items: center;
+      justify-content: center;
     }
   }
 
@@ -1971,6 +2033,10 @@ display: block;
     }
   }
 
+  .count {
+    font-size: small;
+  }
+
   .ceoImg {
     width: 250px;
     height: 250px;
@@ -2005,7 +2071,9 @@ display: block;
 
   .touchWrap {
     grid-template-columns: 1fr;
-    width: 100;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
   }
 
   .contact-wrap > h1 {
@@ -2049,6 +2117,14 @@ display: block;
     }
   }
 
+  .webAbout {
+    flex-direction: column-reverse;
+
+    .webAboutText {
+      text-align: center;
+    }
+  }
+
   .carouselItem {
     width: 100% !important;
   }
@@ -2066,6 +2142,10 @@ display: block;
   .scholarshipCard:nth-child(2),
   .scholarshipCard:nth-child(3) {
     margin-top: 0;
+  }
+
+  .researchAboutText {
+    width: 100%;
   }
 }
 
@@ -2119,7 +2199,7 @@ display: block;
   .about {
     flex-direction: column;
   }
-  .aboutText{
+  .aboutText {
     width: 100%;
   }
 
@@ -2171,21 +2251,21 @@ display: block;
   }
 
   .skills {
-    width: 310px;
+    max-width: 310px;
   }
 
-  .whatsNewContainer{
+  .whatsNewContainer {
     flex-direction: column;
     height: fit-content;
     width: 300px;
   }
 
-  .whatsNewImg{
+  .whatsNewImg {
     height: 250px;
   }
 
   #staff > .h1Text {
-font-size: x-large;
+    font-size: x-large;
   }
 
   .contact-container {
@@ -2221,7 +2301,7 @@ font-size: x-large;
   }
 
   .design-container {
-    flex-direction: column-reverse;
+    flex-direction: column;
     align-items: center;
 
     img {
@@ -2246,6 +2326,12 @@ font-size: x-large;
   }
 }
 
+@media (max-width: 500px) {
+  .skills {
+    width: 100%;
+  }
+}
+
 @media (max-width: 400px) {
   .nav-items {
     width: 250px;
@@ -2258,6 +2344,10 @@ font-size: x-large;
   img[src="/images/customer.png"] {
     height: 300px;
     width: 350px;
+  }
+
+  .logoContainer > h4 {
+    display: none;
   }
 
   .top {
@@ -2279,5 +2369,23 @@ font-size: x-large;
     .projectCardHead {
       font-size: larger !important;
     }
+  }
+
+  .whatsNewH1 {
+    font-size: xx-large;
+  }
+
+  .count {
+    font-size: smaller;
+  }
+}
+
+@media (max-width: 350px) {
+  #reviews {
+    padding: 1em;
+  }
+
+  .reviewText {
+    text-align: center;
   }
 }
