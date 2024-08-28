@@ -34,7 +34,7 @@ const MeetStaff = () => {
         </div>
 
         <Link to="staffs" onClick={window.location.reload}>
-          <button className="staffMore contact"> See More.... </button>
+          <button className="staffMore contact bullet"> See More.... </button>
         </Link>
       </section>
     </>

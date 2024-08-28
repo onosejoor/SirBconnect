@@ -196,13 +196,13 @@ const About = ({ current, dark }) => {
 
         <div className="top">
           {" "}
-          <h2 className="count">
+          <h3 className="count">
             {" "}
             With over {"  "}
             <span className="counter">{count}</span>
             {"  "}
             researches conducted
-          </h2>
+          </h3>
         </div>
       </section>
     </>

@@ -1,4 +1,19 @@
+import { useEffect } from "react";
+import { useState } from "react";
+
 const Ceo = ({ dark }) => {
+  const [p, setP] = useState("");
+
+  useEffect(() => {
+    const pTag = document.querySelector(".ptag").textContent;
+
+    const length = pTag.length
+
+    setP(length)
+
+console.log(p);
+
+  }, [p])
   return (
     <>
       <section id="CEO">
@@ -20,12 +35,12 @@ const Ceo = ({ dark }) => {
                 width="24"
                 height="24"
                 viewBox="0 0 24 24"
-                fill={dark === "false" ? "var(--contactBlue)" : "white"}
+                fill={dark === "false" ? "var(--blue)" : "white"}
               >
                 <path d="M9.983 3v7.391c0 5.704-3.731 9.57-8.983 10.609l-.995-2.151c2.432-.917 3.995-3.638 3.995-5.849h-4v-10h9.983zm14.017 0v7.391c0 5.704-3.748 9.571-9 10.609l-.996-2.151c2.433-.917 3.996-3.638 3.996-5.849h-3.983v-10h9.983z" />
               </svg>
             </div>
-            <p>
+            <p className="ptag">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure sed
               facilis labore voluptatum modi eligendi molestias nam voluptas ea
               id sit veniam harum sequi cupiditate, vero in at iusto illum?

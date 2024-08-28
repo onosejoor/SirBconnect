@@ -8,6 +8,7 @@ import Error from "./sections/404";
 import Schorlarship from "./service-page/router-sections/Scholarship";
 import StaffsRouterComponent from "./service-page/router-sections/StaffsRouter";
 import Research from "./service-page/router-sections/Research";
+import SchoolCas from "./service-page/router-sections/SchoolCas";
 
 console.log(window.location);
 
@@ -92,6 +93,8 @@ function App() {
           />
           <Route path="staffs" element={<StaffsRouterComponent dark={dark} set={set} />} /> 
           <Route path="researches" element={<Research dark={dark} set={set} />} />
+          <Route path="school-cas" element={<SchoolCas dark={dark} set={set} />} /> 
+          <Route path="consultation" element={<SchoolCas dark={dark} set={set} />} />
           <Route path="*" element={<Error dark={dark} set={set} />} />
         </Routes>
       </BrowserRouter>

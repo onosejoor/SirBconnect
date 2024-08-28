@@ -8,6 +8,8 @@
   --originGray: #151718;
   --opacityBlue: rgb(0 36 102 / 80%);
   --lightBlue: #ade8f4;
+  --blue: blue;
+  --blurBlue: rgb(0 0 255 / 0.1);
 }
 
 html {
@@ -75,20 +77,42 @@ section {
   text-align: left;
   display: flex;
   align-items: center;
-
-  background: rgba(255, 255, 255, 0.605);
+  background: var(--blurBlue);
   border-radius: 30px;
-  border: 1px solid rgba(255, 255, 255, 0.605);
   width: fit-content;
   padding: 0.1em 1em;
   color: rgb(0, 0, 0);
   font-weight: 500;
   box-shadow: 0px 0px 5px 0px gray;
   margin-bottom: 10px;
+  color: var(--contactBlue);
 }
 
-.top::before,
-.top::after {
+.bullet {
+  border-radius: 10px !important;
+  padding: 1em 1.2em !important;
+}
+.bullet::before,
+.bullet::after {
+  content: " ";
+  display: none !important;
+  height: 10px;
+  background-color: rgb(0, 0, 0);
+  border-radius: 50%;
+  display: inline-block;
+  width: 10px;
+  padding: 2px;
+}
+
+.bullet::before {
+  margin-right: 10px;
+}
+.bullet::after {
+  margin-left: 10px;
+}
+
+.point::before,
+.point::after {
   content: " ";
   height: 10px;
   background-color: rgb(0, 0, 0);
@@ -98,10 +122,10 @@ section {
   padding: 2px;
 }
 
-.top::before {
+.point::before {
   margin-right: 10px;
 }
-.top::after {
+.point::after {
   margin-left: 10px;
 }
 
@@ -168,11 +192,6 @@ button {
   .nav-link:hover::before {
     background-color: white;
   }
-
-  .top {
-    color: #ffffff;
-    background-color: #000000 !important;
-  }
   .top::after,
   .top::before {
     background-color: #ffffff;
@@ -185,10 +204,6 @@ button {
 
   .h1Text {
     color: hsl(0 0% 100% /0.95) !important;
-
-    .comName {
-      color: #0077b6 !important;
-    }
   }
 
   /* About section dark mode */
@@ -199,16 +214,23 @@ button {
     .aboutText {
       color: white;
     }
-
-    .top {
-      background-color: #023e8a;
-    }
-  }
-  .count {
-    color: white;
   }
   .about {
     color: #ade8f4;
+  }
+
+  div.top {
+    background: none !important;
+
+    .count {
+      opacity: 0.87;
+      color: white;
+    }
+  }
+
+  .top {
+    color: var(--lightBlue) !important;
+    background: var(--originBlur);
   }
 
   .counter {
@@ -236,9 +258,6 @@ button {
       color: #ade8f4;
     }
   }
-  .skills:hover {
-    box-shadow: 0px 0px 10px 0px rgba(255, 255, 255, 0.726);
-  }
   .skillTextWrap > .text {
     text-align: center;
     color: hsl(0 0% 100% / 0.8);
@@ -248,7 +267,7 @@ button {
 
   .staff {
     background-color: #31313177;
-    box-shadow: 0px 0px 10px 0px rgba(255, 255, 255, 0.466);
+    border-color: white;
   }
 
   .staffImg > img {
@@ -264,7 +283,7 @@ button {
   }
 
   .staffPosition {
-    color: var(--lightBlue);
+    color: whitesmoke;
     opacity: 0.8;
   }
 
@@ -284,6 +303,7 @@ button {
 
   .whatsNewContainer {
     background-color: #111111;
+    border-color: hsla(0, 0%, 100%, 0.829);
   }
 
   .whatsNewH1 {
@@ -321,7 +341,6 @@ button {
   .reviewCard {
     background-color: #2f415430;
     outline: 1px solid #a4a4a4;
-    box-shadow: 0px 0px 10px 0px rgba(255, 255, 255, 0.653);
 
     .reviewText {
       color: white;
@@ -397,10 +416,10 @@ button {
       color: #caf0f8;
     }
 
-     b {
+    b {
       color: white;
     }
-    .workHours >p{
+    .workHours > p {
       color: rgba(255, 255, 255, 0.776);
     }
 
@@ -512,9 +531,8 @@ button {
   }
 
   .webCard {
-    background-color: var(--originBlurry);
+    background-color: var(--originBlur);
     border-color: #ade8f4;
-    box-shadow: 0PX 0PX 5PX 0PX white;
   }
 
   .webServiceText {
@@ -556,12 +574,16 @@ button {
 
   /* Research */
 
-  .researchAboutHeader{
+  .researchAboutHeader {
     color: var(--lightBlue);
   }
 
-  .researchAboutText{
+  .researchAboutText {
     color: white;
+  }
+
+  .descripHeader {
+    color: rgba(255, 255, 255, 0.884);
   }
 
   @media (min-width: 801px) {
@@ -665,7 +687,8 @@ button {
 }
 
 .nav:first-child:hover {
-  background-color: #2d3133;
+  background-color: var(--blue);
+  border-color: var(--blue);
 
   .nav-link:first-child {
     color: white;
@@ -683,7 +706,7 @@ button {
 
   .headerIMG {
     width: fit-content;
-    height: 400px;
+    height: 450px;
   }
 
   .h1Text {
@@ -699,15 +722,18 @@ button {
 .head-container > * {
   margin-bottom: 10px;
 }
+.head-container > .top {
+  color: var(--contactBlue);
+}
 
 .comName {
-  color: #002466;
+  color: var(--blue);
 }
 
 .contact {
   padding: 1em;
   color: #fff;
-  background: var(--contactBlue);
+  background: var(--blue);
   border: none;
   border-radius: 5px;
   font-size: medium;
@@ -757,9 +783,16 @@ div.top {
   }
 }
 
-.count {
+div.top,
+div.top > .count {
   font-style: italic;
+  border: none;
+  background: none !important;
+  color: var(--originBlur);
   font-weight: 400;
+  font-size: large;
+  border-radius: 0;
+  box-shadow: none;
 }
 
 .counter {
@@ -767,9 +800,9 @@ div.top {
 }
 
 .aboutText {
-  font-size: larger;
+  font-size: large;
   margin: 10px auto;
-  width: 65%;
+  width: 62%;
 }
 
 /* CEO Section */
@@ -811,7 +844,7 @@ div.top {
   width: 50%;
 
   p {
-    font-size: large;
+    font-size: medium;
     opacity: 0.89;
   }
 }
@@ -843,8 +876,8 @@ div.top {
 }
 
 .skills:hover {
-  box-shadow: 0px 0px 10px #797e82;
-  border-color: white;
+  /* border-color: white; */
+  transform: scale(1.01);
 }
 
 .skillIMG > img {
@@ -880,10 +913,6 @@ div.top {
   .staffMore {
     margin: 20px auto;
   }
-
-  .contact {
-    background-color: var(--opacityBlue);
-  }
 }
 
 .staff-container {
@@ -898,8 +927,13 @@ div.top {
   width: 260px;
   text-align: center;
   padding: 1em;
+  border: 1px solid var(--contactBlue);
   border-radius: 10px;
-  box-shadow: 0px 0px 10px 0px rgba(128, 128, 128, 0.466);
+}
+
+.staffPosition {
+  color: #5f5f5f;
+  opacity: 0.9;
 }
 
 .staffImg {
@@ -931,7 +965,7 @@ div.top {
 .category {
   font-weight: 600;
   text-transform: uppercase;
-  color: var(--contactBlue);
+  color: var(--blue);
   font-size: 0.9em;
 }
 
@@ -962,7 +996,7 @@ div.top {
   align-items: center;
   overflow: hidden;
   border-radius: 3px;
-  box-shadow: 0px 0px 15px 1px gray;
+  border: 1px solid var(--contactBlue);
   transition: 0.2s all linear;
 }
 
@@ -1371,7 +1405,7 @@ div.top {
 }
 
 .svg:hover {
-  fill: #0000cd;
+  fill: var(--blue);
 }
 
 .location {
@@ -1413,6 +1447,7 @@ div.top {
 .graphicAboutHeader {
   text-align: center;
   font-size: xx-large;
+  opacity: 0.9;
 }
 
 #graphicRecentProjects {
@@ -1617,10 +1652,11 @@ div.top {
 }
 
 .webAboutText {
-  font-size: larger;
+  font-size: large;
   text-align: start;
   /* width: 80%; */
   margin: 10px auto;
+  opacity: .9;
 }
 
 .webService {
@@ -1636,24 +1672,16 @@ div.top {
   border-radius: 10px;
   background-color: #ffffffaf;
   border: 1px solid #47494b;
-  /* display: flex;
-  flex-direction: column;
-  justify-content: space-between; */
 
   > div:first-child {
     display: flex;
     justify-content: center;
-    /* align-items: center;
-    flex-direction: column; */
   }
 
   * {
     margin-bottom: 10px;
   }
   transition: all 0.3s ease-in;
-}
-.webCard:hover {
-  box-shadow: 0px 0px 14px 0px #586b7e;
 }
 
 .webServiceImg {
@@ -1740,6 +1768,8 @@ p.webText {
 
 .cardImg {
   transition: 0.3s all linear;
+  height: 280px;
+  width: 100%;
 }
 .cardImg:hover {
   transform: scale(1.02);
@@ -1762,17 +1792,19 @@ p.webText {
 .scholarCardHeader {
   margin: 10px auto;
   font-size: larger;
+  color: var(--originBlur);
 }
 .scholarCardText {
-  color: #000;
+  color: var(--originGray);
+  opacity: 0.85;
 }
 
 /* Research Section */
 
 img.headerImage {
-  height: 360px;
+  height: 390px;
 }
-.researchAboutHeader{
+.researchAboutHeader {
   font-size: xx-large;
   text-align: center;
   color: var(--originBlur);
@@ -1783,19 +1815,32 @@ img.headerImage {
   font-size: larger;
   text-align: center;
   width: 70%;
-  margin:1em auto;
+  margin: 1em auto;
 }
 
-.researchServiceCard{
+.researchServiceCard {
   width: 280px;
 }
 
-.researchServiceContainer{
+.researchServiceContainer {
   padding: 1.5em;
   display: flex;
   justify-content: center;
   gap: 50px;
   flex-wrap: wrap;
+}
+
+.descripHeader {
+  width: 70%;
+  text-align: center;
+  margin: 1em auto;
+  text-transform: capitalize;
+  color: var(--originBlur);
+}
+
+.seemore{
+  text-align: center;
+    padding: 1em;
 }
 
 @media (min-width: 1280px) {
@@ -2146,6 +2191,11 @@ img.headerImage {
 
   .researchAboutText {
     width: 100%;
+  }
+
+  .descripHeader {
+    width: 95%;
+    font-size: larger;
   }
 }
 

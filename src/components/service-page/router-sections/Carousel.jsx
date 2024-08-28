@@ -66,8 +66,8 @@ const Carousel = () => {
           />
           <DesignSkill
             img={images[currentIndex]}
-            header="Digital Content"
-            text="Creating engaging social media graphics, web banners, and email templates to enhance your online presence. We help you connect with your audience through visually appealing and interactive content."
+            header="Social Media Graphics"
+            text="Social platforms thrive on visuals. Let us design thumb-stopping content for your feeds. From Instagram stories to LinkedIn banners, we’ve got the social magic."
           />
           <DesignSkill
             img={images[currentIndex]}

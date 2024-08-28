@@ -7,7 +7,7 @@ function Schorlarship({ set, dark }) {
   return (
     <>
       <Nav dark={dark} set={set} routed={true} />
-      <SchorlarshipSection />
+      <SchorlarshipSection dark={dark}/>
       <Contact dark={dark}/>
       <Footer dark={dark} set={set} routed={true} />
     </>

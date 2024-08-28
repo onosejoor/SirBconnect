@@ -36,7 +36,7 @@ function Skills() {
         <SkillDiv
           src="/images/skills/research2.jpg"
           header="School Assignments and Projects"
-          url={`https://wa.me/+2347030953448/?header=Lets%20Work/discuss%20On%20School-Assignment`}
+          url="school-cas"
           text="Ace Your Assignments with Expert Help Struggling with school assignments? Our experts are here to assist you with research, writing, and editing to ensure you excel in your studies. Whether it’s a complex project or a simple homework task, SirBconnect provides the support you need to achieve academic success."
         />
         <SkillDiv

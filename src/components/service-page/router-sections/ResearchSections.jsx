@@ -25,7 +25,7 @@ const ResearchSections = () => {
       </section>
 
       <section id="researchService">
-        <h3 className="top margin"> Research </h3>
+        <h3 className="top margin point"> Research </h3>
         <div className="researchServiceContainer">
           <WebServiceCard
             text={
@@ -71,7 +71,7 @@ const ResearchSections = () => {
           />
         </div>
 
-        <h3 className="top margin"> Data Analysis </h3>
+        <h3 className="top margin point"> Data Analysis </h3>
 
         <div className="researchServiceContainer">
           <WebServiceCard
