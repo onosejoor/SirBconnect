@@ -33,14 +33,14 @@ const ResearchSections = () => {
             }
             header={"PHD Research"}
             classname={"researchServiceCard"}
-            src={"/images/Router/research/researchHeader.png"}
+            src={"/images/Router/research/PHD.jpeg"}
           />
           <WebServiceCard
             text={
               "If you’re pursuing your Master’s (MSc), Sirbconnect assists with focused literature reviews, research proposal formulation, and effective data collection strategies. They’ll guide you through the MSc research process."
             }
             header={"MSC Research"}
-            src={"/images/Router/research/researchHeader.png"}
+            src={"/images/Router/research/MSC.jpg"}
             classname={"researchServiceCard"}
           />
           <WebServiceCard
@@ -48,7 +48,7 @@ const ResearchSections = () => {
               "If you’re an undergraduate student (BSc), Sirbconnect provides guidance on research basics, literature search skills, and project structuring. We’re your research ally from day one!"
             }
             header={"BSc Research"}
-            src={"/images/Router/research/researchHeader.png"}
+            src={"/images/Router/research/BSC.jpeg"}
             classname={"researchServiceCard"}
           />
         </div>

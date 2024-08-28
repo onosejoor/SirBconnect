@@ -7,10 +7,10 @@ const ProjectCard = (props) => {
         <img src={ props.img || "https://picsum.photos/id/870/200/300?grayscale"} alt="random" />
         <div className="cardText">
           <h3 className="projectCardHead">{props.header}</h3>
-          <p className="text">{props.text}</p>
+          <p className="projectText">{props.text}</p>
 
           <Link to={"#contact"}  onClick={window.location.reload}>
-          <button className="contact btn">  Get In Touch  </button>{" "}
+          <button className="contact bullet">  Get In Touch  </button>{" "}
         </Link>
         </div>
 

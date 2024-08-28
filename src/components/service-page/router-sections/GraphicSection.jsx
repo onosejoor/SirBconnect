@@ -41,24 +41,28 @@ const GraphicDesign = () => {
 
       {/* Projects */}
       <section id="graphicRecentProjects">
-        <h1 className="recentHeader top">
+        <h1 className="top point">
           <span className="headerSpan">Recent Projects</span>
         </h1>
 
         <div id="projects">
           <ProjectCard
+          img="/images/Router/graphic/projects/weddingCard.jpg"
             header="Romantic Invitations"
             text="Understanding the unique needs of each client, SirBconnect tailors its services to ensure that every design project aligns perfectly with the"
           />
           <ProjectCard
+                    img="/images/Router/graphic/projects/banner.jpg"
             header="Romantic Invitations"
             text="Understanding the unique needs of each client, SirBconnect tailors its services to ensure that every design project aligns perfectly with the"
           />
           <ProjectCard
+                    img="/images/Router/graphic/projects/businessCard.jpg"
             header="Romantic Invitations"
             text="Understanding the unique needs of each client, SirBconnect tailors its services to ensure that every design project aligns perfectly with the"
           />
           <ProjectCard
+                    img="/images/Router/graphic/projects/cloth.jpg"
             header="Romantic Invitations"
             text="Understanding the unique needs of each client, SirBconnect tailors its services to ensure that every design project aligns perfectly with the"
           />

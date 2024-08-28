@@ -17,7 +17,7 @@ const DesignSkill = (props) => {
           to={`https://wa.me/+2347056017060/?text=Lets%20Work/discuss%20On%20${props.header}`}
           onClick={window.location.reload}
         >
-          <button className="contact btn"> Get In Touch </button>{" "}
+          <button className="contact bullet btn"> Get In Touch </button>{" "}
         </Link>
         </div>
 

@@ -91,7 +91,7 @@ function App() {
             path="schorlarships"
             element={<Schorlarship dark={dark} set={set} />}
           />
-          <Route path="staffs" element={<StaffsRouterComponent dark={dark} set={set} />} /> 
+          <Route path="teams" element={<StaffsRouterComponent dark={dark} set={set} />} /> 
           <Route path="researches" element={<Research dark={dark} set={set} />} />
           <Route path="school-cas" element={<SchoolCas dark={dark} set={set} />} /> 
           <Route path="consultation" element={<SchoolCas dark={dark} set={set} />} />

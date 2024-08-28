@@ -15,25 +15,25 @@ const MeetStaff = () => {
         <div className="staff-container">
           <StaffCard
             des="Sunday Ezekiel is our creative powerhouse, specializing in branding and digital media. With over a decade of experience, he crafts stunning designs that captivate and inspire."
-            name="Sunday Ezekiel"
-            position="ICT Researcher"
+            name="Austin E.U"
+            position="Manager"
+            img="/images/Router/teams/austin.png"
+          />
+          <StaffCard
+            des="Sunday Ezekiel is our creative powerhouse, specializing in branding and digital media. With over a decade of experience, he crafts stunning designs that captivate and inspire."
+            name="Sunday E"
+            position="Research"
             img="https://picsum.photos/id/870/200/300?grayscale"
           />
           <StaffCard
             des="Sunday Ezekiel is our creative powerhouse, specializing in branding and digital media. With over a decade of experience, he crafts stunning designs that captivate and inspire."
-            name="Sunday Ezekiel"
-            position="ICT Researcher"
-            img="https://picsum.photos/id/870/200/300?grayscale"
-          />
-          <StaffCard
-            des="Sunday Ezekiel is our creative powerhouse, specializing in branding and digital media. With over a decade of experience, he crafts stunning designs that captivate and inspire."
-            name="Sunday Ezekiel"
-            position="ICT Researcher"
+            name="chioma C.M"
+            position="Researcher/Bio-Tactician"
             img="https://picsum.photos/id/870/200/300?grayscale"
           />
         </div>
 
-        <Link to="staffs" onClick={window.location.reload}>
+        <Link to="teams" onClick={window.location.reload}>
           <button className="staffMore contact bullet"> See More.... </button>
         </Link>
       </section>

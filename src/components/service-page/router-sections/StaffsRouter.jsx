@@ -13,26 +13,26 @@ const StaffsRouterComponent = ({dark, set}) => {
       <div className="staff-container">
         <StaffCard
           des="Sunday Ezekiel is our creative powerhouse, specializing in branding and digital media. With over a decade of experience, he crafts stunning designs that captivate and inspire."
-          name="Sunday Ezekiel"
-          position="ICT Researcher"
+          name="Obinna N"
+          position="ICT technician"
           img="https://picsum.photos/id/870/200/300?grayscale"
         />{" "}
         <StaffCard
           des="Sunday Ezekiel is our creative powerhouse, specializing in branding and digital media. With over a decade of experience, he crafts stunning designs that captivate and inspire."
-          name="Sunday Ezekiel"
-          position="ICT Researcher"
+          name="Samuel"
+          position="Computer engineer"
           img="https://picsum.photos/id/870/200/300?grayscale"
         />{" "}
         <StaffCard
           des="Sunday Ezekiel is our creative powerhouse, specializing in branding and digital media. With over a decade of experience, he crafts stunning designs that captivate and inspire."
-          name="Sunday Ezekiel"
-          position="ICT Researcher"
+          name="christy"
+          position="researcher"
           img="https://picsum.photos/id/870/200/300?grayscale"
         />{" "}
         <StaffCard
           des="Sunday Ezekiel is our creative powerhouse, specializing in branding and digital media. With over a decade of experience, he crafts stunning designs that captivate and inspire."
-          name="Sunday Ezekiel"
-          position="ICT Researcher"
+          name="peter A.O"
+          position="Researcher"
           img="https://picsum.photos/id/870/200/300?grayscale"
         />{" "}
         <StaffCard

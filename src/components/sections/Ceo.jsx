@@ -1,28 +1,10 @@
-import { useEffect } from "react";
-import { useState } from "react";
-
 const Ceo = ({ dark }) => {
-  const [p, setP] = useState("");
-
-  useEffect(() => {
-    const pTag = document.querySelector(".ptag").textContent;
-
-    const length = pTag.length
-
-    setP(length)
-
-console.log(p);
-
-  }, [p])
   return (
     <>
       <section id="CEO">
         <div className="ceo-container">
           <div className="ceoImg">
-            <img
-              src={ "/images/staffs & CEO/dummy ceo.jpg"}
-              alt="Ceo image"
-            />
+            <img src={"/images/staffs & CEO/dummy ceo.jpg"} alt="Ceo image" />
           </div>
 
           <div className="ceoText">
@@ -41,9 +23,8 @@ console.log(p);
               </svg>
             </div>
             <p className="ptag">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure sed
-              facilis labore voluptatum modi eligendi molestias nam voluptas ea
-              id sit veniam harum sequi cupiditate, vero in at iusto illum?
+              In the labyrinth of discovery, research is the golden thread that
+              unravels secrets and illuminates hidden chambers
             </p>
           </div>
         </div>
