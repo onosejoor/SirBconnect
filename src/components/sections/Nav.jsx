@@ -57,17 +57,31 @@ function Nav({ dark, set, routed }) {
           />
 
           <svg
-            className="bars"
-            onClick={show}
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 50 50"
+          className="bars"
             width="30px"
             height="30px"
+            viewBox="0 0 24 24"
             fill={dark === "false" ? "#001233" : "#fff"}
+            onClick={show}
+            xmlns="http://www.w3.org/2000/svg"
           >
             <path
-              onClick={show}
-              d="M 5 8 A 2.0002 2.0002 0 1 0 5 12 L 45 12 A 2.0002 2.0002 0 1 0 45 8 L 5 8 z M 5 23 A 2.0002 2.0002 0 1 0 5 27 L 45 27 A 2.0002 2.0002 0 1 0 45 23 L 5 23 z M 5 38 A 2.0002 2.0002 0 1 0 5 42 L 45 42 A 2.0002 2.0002 0 1 0 45 38 L 5 38 z"
+              d="M4 18L20 18"
+              stroke={dark === "false" ? "#001233" : "#fff"}
+              strokeWidth="2"
+              strokeLinecap="round"
+            />
+            <path
+              d="M4 12L20 12"
+              stroke={dark === "false" ? "#001233" : "#fff"}
+              strokeWidth="2"
+              strokeLinecap="round"
+            />
+            <path
+              d="M4 6L20 6"
+              stroke={dark === "false" ? "#001233" : "#fff"}
+              strokeWidth="2"
+              strokeLinecap="round"
             />
           </svg>
           <ul className="nav-items">
