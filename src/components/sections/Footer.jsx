@@ -52,6 +52,34 @@ function Footer({ routed, ...props }) {
               </ul>
             </div>
           </div>
+          <div className="foot">
+            <h3 className="footHead">Services</h3>
+            <div className="footLink">
+              <ul>
+                <Lists
+                  class2="footer-link"
+                  text="Research Services"
+                  link={"researches"}
+                />
+                <Lists
+                  class2="footer-link"
+                  text="Graphic designs"
+                  link={"graphic-design"}
+                />
+                <Lists
+                  class2="footer-link"
+                  text="Scholarships"
+                  link={"schorlarships"}
+                />
+
+                <Lists
+                  class2="footer-link"
+                  text="Web Development"
+                  link="web-dev"
+                />
+              </ul>
+            </div>
+          </div>
           <div className="foot workingHours">
             <h3 className="footHead">Working Hours</h3>
             <div className="workHours">
