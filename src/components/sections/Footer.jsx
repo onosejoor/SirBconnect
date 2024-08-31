@@ -1,16 +1,19 @@
+import { useContext } from "react";
 import Lists from "../snippets/List";
 import Svg from "../snippets/Svg";
+import { DarkThemeContext } from "../Context";
 
-function Footer({ routed, ...props }) {
+function Footer({ routed}) {
+  const {dark} = useContext(DarkThemeContext);
   return (
     <>
-      <section id="footer" ref={props.currentRef}>
+      <section id="footer">
         <footer className="footer">
           <div className="logoWrap">
             <img
               className="logo"
               src={
-                props.dark === "true"
+                dark === "true"
                   ? "/images/Logo2.png"
                   : "/images/Logo1.png"
               }

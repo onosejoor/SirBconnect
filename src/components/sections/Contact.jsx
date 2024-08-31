@@ -1,9 +1,11 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 
 import ContactCard from "../snippets/ContactCard";
 import FormInput from "../snippets/Inputs";
+import { DarkThemeContext } from "../Context";
 
-function Contact({ dark }) {
+function Contact() {
+  const {dark} = useContext(DarkThemeContext)
   const [inputs, setInputs] = useState({
     name: "",
     email: "",
@@ -63,7 +65,7 @@ function Contact({ dark }) {
             email: "Invalid Email",
           };
         });
-        console.log(error, error.email);
+        // console.log(error, error.email);
       }
     }
   }

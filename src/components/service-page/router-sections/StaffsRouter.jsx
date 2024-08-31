@@ -3,10 +3,10 @@ import Footer from "../../sections/Footer";
 import Nav from "../../sections/Nav";
 import StaffCard from "../../snippets/StaffCard";
 
-const StaffsRouterComponent = ({dark, set}) => {
+const StaffsRouterComponent = () => {
   return (
     <>
-    <Nav set={set} dark={dark} routed={true} />
+    <Nav routed={true} />
       <section id="staff">
       <h3 className="top"> Meet Our Team </h3>
 
@@ -63,8 +63,8 @@ const StaffsRouterComponent = ({dark, set}) => {
       </div>
       </section>
 
-      <Contact dark={dark}/>
-      <Footer dark={dark} routed={true}/>
+      <Contact />
+      <Footer  routed={true}/>
     </>
   );
 };

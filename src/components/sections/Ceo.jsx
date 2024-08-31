@@ -1,4 +1,8 @@
-const Ceo = ({ dark }) => {
+import { useContext } from "react";
+import { DarkThemeContext } from "../Context";
+
+const Ceo = () => {
+  const {dark} = useContext(DarkThemeContext)
   return (
     <>
       <section id="CEO">

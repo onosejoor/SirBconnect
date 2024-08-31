@@ -47,7 +47,7 @@ const ResearchSections = () => {
             text={
               "If you’re an undergraduate student (BSc), Sirbconnect provides guidance on research basics, literature search skills, and project structuring. We’re your research ally from day one!"
             }
-            header={"BSc Research"}
+            header={"BSC Research"}
             src={"/images/Router/research/BSC.jpeg"}
             classname={"researchServiceCard"}
           />
