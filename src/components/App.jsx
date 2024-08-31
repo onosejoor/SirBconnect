@@ -9,6 +9,8 @@ import Schorlarship from "./service-page/router-sections/Scholarship";
 import StaffsRouterComponent from "./service-page/router-sections/StaffsRouter";
 import Research from "./service-page/router-sections/Research";
 import SchoolCas from "./service-page/router-sections/SchoolCas";
+import NYSC from "./service-page/router-sections/NYSC";
+import { DarkThemeContext } from "./Context";
 
 console.log(window.location);
 
@@ -26,16 +28,6 @@ function App() {
       document.body.classList.remove("dark");
     }
   }, [dark]);
-
-  const set = () => {
-    setDark((prev) => {
-      if (prev === "true") {
-        return "false";
-      } else {
-        return "true";
-      }
-    });
-  };
 
   useEffect(() => {
     const urlHash = window.location.hash;
@@ -73,30 +65,23 @@ function App() {
       observer.disconnect();
     };
   }, []);
-
   return (
     <div className="container">
       <BrowserRouter>
-        <Routes>
-          <Route
-            path="/"
-            element={<SirB dark={dark} set={set} curRef={ref} />}
-          />
-          <Route
-            path="graphic-design"
-            element={<Graphics dark={dark} set={set} ggg={ref} />}
-          />
-          <Route path="web-dev" element={<WebDev dark={dark} set={set} />} />
-          <Route
-            path="schorlarships"
-            element={<Schorlarship dark={dark} set={set} />}
-          />
-          <Route path="teams" element={<StaffsRouterComponent dark={dark} set={set} />} /> 
-          <Route path="researches" element={<Research dark={dark} set={set} />} />
-          <Route path="school-cas" element={<SchoolCas dark={dark} set={set} />} /> 
-          <Route path="consultation" element={<SchoolCas dark={dark} set={set} />} />
-          <Route path="*" element={<Error dark={dark} set={set} />} />
-        </Routes>
+        <DarkThemeContext.Provider value={{ dark, setDark }}>
+          <Routes>
+            <Route path="/" element={<SirB curRef={ref} />} />
+            <Route path="graphic-design" element={<Graphics />} />
+            <Route path="web-dev" element={<WebDev />} />
+            <Route path="schorlarships" element={<Schorlarship />} />
+            <Route path="teams" element={<StaffsRouterComponent />} />
+            <Route path="researches" element={<Research />} />
+            <Route path="school-cas" element={<SchoolCas />} />
+            <Route path="consultation" element={<SchoolCas />} />
+            <Route path="nysc" element={<NYSC />} />
+            <Route path="*" element={<Error />} />
+          </Routes>
+        </DarkThemeContext.Provider>
       </BrowserRouter>
     </div>
   );

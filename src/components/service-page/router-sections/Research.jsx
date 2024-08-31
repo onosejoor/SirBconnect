@@ -3,12 +3,12 @@ import Contact from "../../sections/Contact";
 import Footer from "../../sections/Footer";
 import ResearchSections from "./ResearchSections";
 
-const Research = ({dark, set}) => {
+const Research = () => {
     return (<>
-    <Nav dark={dark} set={set} routed={true}/>
+    <Nav routed={true}/>
     <ResearchSections />
-    <Contact dark={dark}/>
-    <Footer dark={dark} routed={true}/>
+    <Contact />
+    <Footer routed={true}/>
     </>)
 }
 

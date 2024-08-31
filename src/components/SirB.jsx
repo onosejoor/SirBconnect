@@ -9,19 +9,19 @@ import MeetStaff from "./sections/MeetStaff";
 import Ceo from "./sections/Ceo";
 import WhatsNew from "./sections/WhatsNew";
 
-function SirB({ set, dark, curRef }) {
+function SirB({curRef }) {
   return (
     <>
-      <Nav set={set} dark={dark} />
+      <Nav/>
       <Header />
-      <About current={curRef} dark={dark}/>
-      <Ceo dark={dark} />
+      <About current={curRef}/>
+      <Ceo/>
       <Skills />
       <MeetStaff />
       <WhatsNew />
       <Reviews />
-      <Contact dark={dark} />
-      <Footer dark={dark} />
+      <Contact/>
+      <Footer/>
     </>
   );
 }

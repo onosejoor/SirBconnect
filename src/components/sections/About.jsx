@@ -1,8 +1,10 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
+import { DarkThemeContext } from "../Context";
 
-const About = ({ current, dark }) => {
+const About = ({ current}) => {
   const [count, setCount] = useState(0);
   const target = 500;
+  const {dark} = useContext(DarkThemeContext)
 
   useEffect(() => {
     if (current === "about") {

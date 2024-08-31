@@ -1,8 +1,21 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import Lists from "../snippets/List";
+import { DarkThemeContext } from "../Context";
 
-function Nav({ dark, set, routed }) {
+function Nav({routed }) {
   const [showed, setShowed] = useState(false);
+  const {dark, setDark} = useContext(DarkThemeContext)
+
+  const set = () => {
+    setDark((prev) => {
+      if (prev === "true") {
+        return "false";
+      } else {
+        return "true";
+      }
+    });
+  };
+  
 
   useEffect(() => {
     if (showed) {

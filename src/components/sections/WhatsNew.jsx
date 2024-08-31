@@ -29,7 +29,6 @@ const WhatsNew = () => {
                 Register for the 2024 WAEC exams by September 1, 2024. Visit the{" "}
                 WAEC website for details.
               </>
-              //  <Link target="_blank" to="https://www.example.com"> WAEC </Link>
             }
             text2={
               "The West African Examinations Council (WAEC) conducts the West African Senior School Certificate Examination (WASSCE) for both school and private candidates. For the 2024 WASSCE for Private Candidates (Second Series), normal registration is ongoing. Candidates must complete their biometrics capturing and online registration by 11:59 PM on Sunday, September 1, 20241. You can register online via the WAECKONNECT app or the WAEC website"

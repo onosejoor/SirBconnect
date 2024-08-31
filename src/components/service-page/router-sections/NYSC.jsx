@@ -1,15 +1,15 @@
 import Contact from "../../sections/Contact";
 import Footer from "../../sections/Footer";
 import Nav from "../../sections/Nav";
-import DescripText from "./DescripText";
+import NYSCsection from "./NYSCsection";
 
-export default function SchoolCas() {
+export default function NYSC() {
   return (
     <>
-      <Nav routed={true} />
-      <DescripText />
+      <Nav routed={true}/>
+      <NYSCsection />
       <Contact />
-      <Footer routed={true} />
+      <Footer />
     </>
   );
 }

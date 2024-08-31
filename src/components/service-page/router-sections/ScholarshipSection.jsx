@@ -1,8 +1,11 @@
+import { useContext } from "react";
 import AboutText from "../../snippets/AboutText";
 import HeaderCard from "../../snippets/HeaderCard";
 import ScholarshipServiceCard from "../../snippets/ScholarshicServiceCard";
+import { DarkThemeContext } from "../../Context";
 
-function SchorlarshipSection({ dark }) {
+function SchorlarshipSection() {
+  const {dark} = useContext(DarkThemeContext)
   return (
     <>
       <section id="scholarshipHeader">

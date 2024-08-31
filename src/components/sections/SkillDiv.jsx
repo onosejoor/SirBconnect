@@ -11,12 +11,8 @@ const SkillDiv = (props) => {
   }
 
   return (
-    <Link
-      to={props.url}
-      onClick={window.location.reload}
-      className="anchorSkill"
-    >
-      <div className="skills">
+    <div className="skills">
+      <div className="skillContainer">
         <div className="skillIMG">
           <img src={props.src} alt="skills" loading="lazy" />
         </div>
@@ -24,11 +20,27 @@ const SkillDiv = (props) => {
         <div className="skillTextWrap">
           <h3 className="skillText">{props.header}</h3>
 
-          <p className="text">
-            {!show ? props.text.slice(0, 150) + "..." : props.text}
-          </p>
+          {!show ? (
+            <p className="text">
+              {props.text.slice(0, 150) + "... "}{" "}
+              <span>
+                {" "}
+                <button
+                  className="linkButton whatsNewLink"
+                  onClick={(e) => {
+                    setSee();
+                    e.preventDefault();
+                  }}
+                >
+                  {show ? "See Less" : "See more"}
+                </button>
+              </span>
+            </p>
+          ) : (
+            <p className="text">{props.text}</p>
+          )}
 
-          <div className="seemore">
+          <div className="seemore">          {show && (
             <button
               className="linkButton whatsNewLink"
               onClick={(e) => {
@@ -36,12 +48,23 @@ const SkillDiv = (props) => {
                 e.preventDefault();
               }}
             >
-              {show ? "See Less" : "See more"}
+              See Less
             </button>
-          </div>
+          )}</div>
+
         </div>
       </div>
-    </Link>
+
+      <Link
+        to={props.url}
+        onClick={window.location.reload}
+        className="anchorSkill"
+      >
+        <div className="goToPage">
+          <img src="/images/icons/arrowTop.svg" alt="Goto page arrow" />
+        </div>
+      </Link>
+    </div>
   );
 };
 

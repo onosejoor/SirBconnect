@@ -4,7 +4,7 @@ import Footer from "../sections/Footer";
 import Nav from "../sections/Nav";
 import Job from "./router-sections/Web";
 
-function WebDev({ dark, set }) {
+function WebDev() {
 
   useEffect(() => {
     window.scrollTo({
@@ -15,10 +15,10 @@ function WebDev({ dark, set }) {
   }, []);
   return (
     <>
-      <Nav dark={dark} routed={true} set={set} />
+      <Nav  routed={true} />
       <Job />
-      <Contact dark={dark}/>
-      <Footer dark={dark} routed={true}/>
+      <Contact />
+      <Footer routed={true}/>
     </>
   );
 }

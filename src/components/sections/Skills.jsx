@@ -6,12 +6,19 @@ function Skills() {
       <h1 className="about">What We Offer</h1>
       <div className="arrow"></div>
       <div id="skill">
-      <SkillDiv
+        <SkillDiv
           src="/images/skills/internet.jpg"
           header="Internet Services and Research"
           url="researches"
           text=" SirBconnect offers reliable internet services and comprehensive research solutions. Whether you need high-speed internet services: Online registration, Data entry, Data capturing, Web management etc, or in-depth research for academic or professional projects, we’ve got you covered. Our team ensures you stay connected and have access to the information you need."
         />
+        <SkillDiv
+          src="/images/skills/nysc.png"
+          header="NYSC Registration"
+          url="nysc"
+          text=" SirBconnect offers reliable internet services and comprehensive research solutions. Whether you need high-speed internet services: Online registration, Data entry, Data capturing, Web management etc, or in-depth research for academic or professional projects, we’ve got you covered. Our team ensures you stay connected and have access to the information you need."
+        />
+
         <SkillDiv
           src="/images/skills/scholarships.jpg"
           header="Scholarships"
@@ -31,7 +38,6 @@ function Skills() {
           header=" Full-stack Web Development"
           text="Our web development team creates responsive, user-friendly websites tailored to your needs. Enhance your online presence with a professional website from SirBconnect. We specialize in creating websites that are not only visually appealing but also optimized for performance and user experience."
         />
-
 
         <SkillDiv
           src="/images/skills/research2.jpg"

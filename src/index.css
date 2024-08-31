@@ -10,8 +10,12 @@
   --lightBlue: #ade8f4;
   --blue: blue;
   --blurBlue: rgb(0 0 255 / 0.1);
+  --gray: rgb(21 23 24 / 81%);
 }
-
+::selection{
+  background: white;
+  color: var(--blue);
+}
 html {
   scroll-behavior: smooth;
 }
@@ -52,6 +56,7 @@ img {
   position: relative;
   z-index: 1000;
   margin: 0 auto;
+  border: 1px solid white;
 }
 
 section {
@@ -81,11 +86,10 @@ section {
   border-radius: 30px;
   width: fit-content;
   padding: 0.1em 1em;
-  color: rgb(0, 0, 0);
+  color: var(--blue);
   font-weight: 500;
-  box-shadow: 0px 0px 5px 0px gray;
+  box-shadow: 0px 0px 2px 0px gray;
   margin-bottom: 10px;
-  color: var(--contactBlue);
 }
 
 .bullet {
@@ -175,7 +179,7 @@ button {
     background: linear-gradient(to right, #1f1f1f7b, #000f1a88);
   }
   .nav-items {
-    background-color: var(--opacityBlue);
+    background-color: var(--contactBlue);
   }
 
   .nav-link {
@@ -586,11 +590,15 @@ button {
     color: rgba(255, 255, 255, 0.884);
   }
 
-  @media (min-width: 801px) {
+  @media (min-width: 801px ) {
     .nav-items {
       background-color: transparent;
+
     }
+
   }
+
+  
 }
 
 /* Nav bar */
@@ -723,7 +731,7 @@ button {
   margin-bottom: 10px;
 }
 .head-container > .top {
-  color: var(--contactBlue);
+  /* color: var(--contactBlue); */
 }
 
 .comName {
@@ -808,11 +816,7 @@ div.top > .count {
 /* CEO Section */
 
 #CEO {
-  background-image: linear-gradient(
-    transparent,
-    hsl(219 100% 20% / 0.2),
-    transparent
-  );
+background: linear-gradient(17deg,var(--blurBlue) 50%, transparent 50%);
 }
 
 .ceo-container {
@@ -829,7 +833,7 @@ div.top > .count {
     border-radius: 10px;
     width: 100%;
     height: 300px;
-    box-shadow: 0px 0px 10px 5px rgb(128, 128, 128);
+    border: 1px solid var(--gray);
   }
 }
 
@@ -872,15 +876,51 @@ div.top > .count {
   transition: all 0.2s ease-out;
   border: 0.5px solid #2d31333b;
   overflow: hidden;
-  height: 100%;
+  position: relative;
+  /* height: 100%; */
+  transition: 0.2s all ease-in;
+}
+
+.goToPage {
+  transition: 0.4s all ease-in;
+  position: absolute;
+  opacity: 0;
+  top: 18%;
+  bottom: 50%;
+  background: white;
+  border-radius: 50%;
+  height: 100px;
+  left: 50%;
+  transform: translate(-50%);
+  border: 1px solid var(--opacityBlue);
+
+  img {
+    padding: 1em;
+    height: 100%;
+  }
+}
+
+.skillContainer {
+  transition: 0.4s all ease-in;
 }
 
 .skills:hover {
-  /* border-color: white; */
   transform: scale(1.01);
+
+  .skillContainer {
+    opacity: 0.9;
+  }
+  .skillIMG > img {
+    filter: grayscale(100%) brightness(0.5);
+  }
+
+  .goToPage {
+    opacity: 1;
+  }
 }
 
 .skillIMG > img {
+  transition: 0.3s all ease-in-out;
   width: 100%;
   height: 200px;
 }
@@ -932,22 +972,21 @@ div.top > .count {
   transition: 0.2s all ease-in;
   position: relative;
   overflow: hidden;
-
 }
 
-.staffText{
-  opacity: .86;
+.staffText {
+  opacity: 0.86;
 }
-.staffCon{
+.staffCon {
   transition: all 0.3s ease;
 }
-.staff:hover{
-.staffCon{
-  opacity: 0;
-}
-.staffHidden{
-opacity: 1;
-}
+.staff:hover {
+  .staffCon {
+    opacity: 0;
+  }
+  .staffHidden {
+    opacity: 1;
+  }
 }
 
 .staffPosition {
@@ -981,7 +1020,7 @@ opacity: 1;
   }
 }
 
-.staffHidden{
+.staffHidden {
   transition: 0.3s all ease-in;
   position: absolute;
   top: 0;
@@ -1634,7 +1673,7 @@ opacity: 1;
 
   .projectText {
     color: var(--originBlur);
-    opacity: .86;
+    opacity: 0.86;
     padding: 1em 0;
     font-size: large;
   }
@@ -1670,7 +1709,7 @@ opacity: 1;
   text-align: start;
   /* width: 80%; */
   margin: 10px auto;
-  opacity: .9;
+  opacity: 0.9;
 }
 
 .webService {
@@ -1852,9 +1891,131 @@ img.headerImage {
   color: var(--originBlur);
 }
 
-.seemore{
+.seemore {
   text-align: center;
-    padding: 1em;
+  padding: 1em;
+}
+
+/* NYSC */
+
+#nyscHeader{
+padding: 0;
+} 
+
+.nyscBackgroung{
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+  filter: opacity(0.2);
+
+}
+.nysc2{
+  flex-direction: row-reverse;
+  gap: 50px;
+
+  .nyscAboutTextCon{
+    width: 600px;
+  }
+}
+.nyscHeader {
+  display: block;
+  padding: 2em;
+
+  .top {
+    font-size: large;
+    margin: 10px auto;
+    margin-bottom: 0;
+    color: var(--blue);
+  }
+  div {
+    width: 70%;
+    text-align: center;
+    margin: auto;
+    /* backdrop-filter: blur(5px); */
+  }
+
+  .designH1 {
+    font-size: 60px;
+    margin-bottom: 20px;
+    font-weight: 500;
+  }
+}
+
+.nyscAboutCon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    height: 400px;
+  }
+}
+
+.nyscAboutTextCon {
+  font-size: x-large;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.nyscAboutText {
+  font-size: 16px;
+  opacity: 0.7;
+}
+
+.nyscServiceImage {
+  height: fit-content;
+  margin-top: -18%;
+  width: fit-content;
+  position: relative;
+  background-color: var(--contactBlue);
+  padding: 1em;
+  border-radius: 50%;
+  display: grid;
+}
+.brand {
+  position: relative;
+  width: 350px;
+  background-color: white;
+  padding: 1em;
+  height: fit-content;
+  border-radius: 5px;
+  border: 1px solid var(--originBlurry);
+}
+.brand:nth-child(2) {
+  margin-top: 2.5em;
+}
+.brand:nth-child(3) {
+  margin-top: 5em;
+}
+.bold {
+  font-size: x-large;
+  margin-top: 1em;
+}
+.state {
+  padding: 1em 0;
+  font-size: 15px;
+  color: var(--gray);
+}
+
+.illu {
+  width: 50px;
+}
+
+.nyscServiceContainer {
+  margin-top: 5em;
+  display: flex;
+  gap: 50px;
+  justify-content: center;
+  position: relative;
+}
+
+.line {
+  position: absolute;
+  height: 5px;
+  background: var(--opacityBlue);
+  width: 70%;
+  top: 50%;
+  z-index: -1;
 }
 
 @media (min-width: 1280px) {
@@ -1904,7 +2065,7 @@ img.headerImage {
     width: 300px;
     transition: right 0.2s linear;
     align-items: baseline !important;
-    backdrop-filter: blur(10px);
+
 
     .nav {
       margin-left: 50px;
@@ -2002,7 +2163,6 @@ img.headerImage {
       max-width: 100%;
     }
   }
-
 
   .cardText {
     top: calc(100% / 2.5) !important;
@@ -2213,7 +2373,8 @@ img.headerImage {
     top: 0;
     padding-top: 1em;
     padding-left: 0.5em;
-  }.navBar::before{
+  }
+  .navBar::before {
     content: "";
     height: 100%;
     width: 100%;
@@ -2426,12 +2587,11 @@ img.headerImage {
   }
 
   .cardText {
-bottom: 1em !important;
+    bottom: 1em !important;
 
     .projectCardHead {
       font-size: x-large !important;
     }
-
   }
 
   .whatsNewH1 {
