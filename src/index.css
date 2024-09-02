@@ -23,7 +23,7 @@ html {
 body {
   transition: all 0.2s ease-in;
   background-color: rgb(242, 242, 242);
-  background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
+  background-image: url(/images/cubes.png);
   /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
 }
 
@@ -162,12 +162,8 @@ button {
 
 /* Dark Mode */
 .dark {
-  /* ::selection{
-    background-color: white;
-  } */
-  /* background: linear-gradient(to right, #1f1f1f, #212529); */
   background-color: black;
-  background-image: url(https://www.transparenttextures.com/patterns/assault.png);
+  background-image: url(/images/assault.png);
 
   .nav:first-child {
     border-color: white;
