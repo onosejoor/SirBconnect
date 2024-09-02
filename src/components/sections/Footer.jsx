@@ -2,23 +2,24 @@ import { useContext } from "react";
 import Lists from "../snippets/List";
 import Svg from "../snippets/Svg";
 import { DarkThemeContext } from "../Context";
+import { Link } from "react-router-dom";
 
-function Footer({ routed}) {
-  const {dark} = useContext(DarkThemeContext);
+function Footer({ routed }) {
+  const { dark } = useContext(DarkThemeContext);
   return (
     <>
       <section id="footer">
         <footer className="footer">
           <div className="logoWrap">
-            <img
-              className="logo"
-              src={
-                dark === "true"
-                  ? "/images/Logo2.png"
-                  : "/images/Logo1.png"
-              }
-              alt="SirB logo"
-            />
+            <Link to={"/"}>
+              <img
+                className="logo"
+                src={
+                  dark === "true" ? "/images/Logo2.png" : "/images/Logo1.png"
+                }
+                alt="SirB logo"
+              />
+            </Link>
 
             <p className="location">
               No 61 Clifford And Georgewilll Plaza, Choba, Port-Harcourt,
@@ -79,6 +80,11 @@ function Footer({ routed}) {
                   class2="footer-link"
                   text="Web Development"
                   link="web-dev"
+                />
+                <Lists
+                  class2="footer-link"
+                  text="NYSC"
+                  link="nysc"
                 />
               </ul>
             </div>

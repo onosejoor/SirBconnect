@@ -23,13 +23,13 @@ const MeetStaff = () => {
             des="Sunday Ezekiel is our creative powerhouse, specializing in branding and digital media. With over a decade of experience, he crafts stunning designs that captivate and inspire."
             name="Sunday E"
             position="Research"
-            img="https://picsum.photos/id/870/200/300?grayscale"
+            img="/images/staffs & CEO/boy.png"
           />
           <StaffCard
             des="Sunday Ezekiel is our creative powerhouse, specializing in branding and digital media. With over a decade of experience, he crafts stunning designs that captivate and inspire."
             name="chioma C.M"
             position="Researcher/Bio-Tactician"
-            img="https://picsum.photos/id/870/200/300?grayscale"
+            img="/images/staffs & CEO/girl.jpeg"
           />
         </div>
 
