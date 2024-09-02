@@ -1,5 +1,4 @@
 import { useContext } from "react";
-import HeaderCard from "../../snippets/HeaderCard";
 import NyscServiceCard from "../../snippets/NYSCServiceCard";
 import { DarkThemeContext } from "../../Context";
 
@@ -8,15 +7,20 @@ export default function NYSCsection() {
   return (
     <>
       <section id="nyscHeader">
-        <img className="nyscBackgroung" src="/images/Router/nysc/nysc.jpeg" alt="background" />
-        {" "}
-        <HeaderCard
-          text="Serving with Purpose, Impacting Communities"
-          top2="CBO Accredited"
-          class="nyscHeader"
-        />
+        <img
+          className="nyscBackgroung"
+          src="/images/Router/nysc/nysc.jpeg"
+          alt="background"
+        />{" "}
+        <div className="nyscHeader">
+          <h4 className="top">CBO Accredited</h4>
+          <h1 className="nysc nyscH1">
+            <span className="comName">SirBconnect: </span>
+            Serving with Purpose, Impacting Communities
+          </h1>{" "}
+        </div>
       </section>
-
+      {/* </div> */}
       <section id="nyscAbout">
         <div className="nyscAboutCon">
           <img src="/images/Router/nysc/help.webp" alt="" />
@@ -125,7 +129,136 @@ export default function NYSCsection() {
           />
           <div className="line"></div>
         </div>
+        <div className="nyscServiceContainer second">
+          <NyscServiceCard
+            header={"Payment Status"}
+            text={
+              "SirBconnect assists with checking your payment status. If you’ve made payments related to your NYSC registration, you can verify their status with SirBconnect."
+            }
+            // src={"/images/Router/nysc/research.png"}
+            svg={
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
+                <g
+                  id="SVGRepo_tracerCarrier"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                ></g>
+                <g id="SVGRepo_iconCarrier">
+                  {" "}
+                  <rect
+                    x="3"
+                    y="6"
+                    width="18"
+                    height="13"
+                    rx="2"
+                    stroke={dark === "false" ? "#fff" : "#000"}
+                    strokeWidth="0.9359999999999999"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  ></rect>{" "}
+                  <path
+                    d="M3 10H20.5"
+                    stroke={dark === "false" ? "#fff" : "#000"}
+                    strokeWidth="0.9359999999999999"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  ></path>{" "}
+                  <path
+                    d="M7 15H9"
+                    stroke={dark === "false" ? "#fff" : "#000"}
+                    strokeWidth="0.9359999999999999"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  ></path>{" "}
+                </g>
+              </svg>
+            }
+          />
+          <NyscServiceCard
+            header={"Consultation"}
+            text={
+              "SirBconnect offers guidelines for prospective corps members. These guidelines cover various aspects, including foreign PCM (Prospective Corps Members) requirements, payment procedures, and even guidelines for correcting your date of birth if needed."
+            }
+            svg={
+              <svg
+                fill={dark === "false" ? "#fff" : "#000"}
+                viewBox="0 0 512 512"
+                enableBackground="new 0 0 512 512"
+                version="1.1"
+                xmlSpace="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlnsXlink="http://www.w3.org/1999/xlink"
+              >
+                <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
+                <g
+                  id="SVGRepo_tracerCarrier"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                ></g>
+                <g id="SVGRepo_iconCarrier">
+                  {" "}
+                  <g id="Layer_1"></g>{" "}
+                  <g id="Layer_2">
+                    {" "}
+                    <g>
+                      {" "}
+                      <path d="M246.1,144h-126c-17.8,0-32.2,14.5-32.2,32.2v85.5c0,16.9,13.1,30.9,29.8,32.2v23.5c0,3,1.8,5.8,4.6,6.9 c0.9,0.4,1.9,0.6,2.9,0.6c2,0,3.9-0.8,5.3-2.2l28.7-28.7h74.5v10.9c0,17.8,14.5,32.3,32.3,32.3h87l28.7,28.7 c1.4,1.4,3.4,2.2,5.3,2.2c1,0,1.9-0.2,2.9-0.6c2.8-1.2,4.6-3.9,4.6-6.9V337c16.6-1.3,29.8-15.2,29.8-32.2v-85.5 c0-17.8-14.5-32.3-32.3-32.3H278.4v-10.9C278.4,158.4,263.9,144,246.1,144z M156,279c-2,0-3.9,0.8-5.3,2.2l-18.1,18.1v-12.8 c0-4.1-3.4-7.5-7.5-7.5h-5c-9.5,0-17.2-7.7-17.2-17.2v-85.5c0-9.5,7.7-17.2,17.2-17.2h126c9.5,0,17.2,7.7,17.2,17.2v85.5 c0,9.5-7.7,17.2-17.2,17.2H156z M391.9,202.1c9.5,0,17.3,7.7,17.3,17.3v85.5c0,9.5-7.7,17.3-17.3,17.3h-5c-4.1,0-7.5,3.4-7.5,7.5 v12.8l-18.1-18.1c-1.4-1.4-3.3-2.2-5.3-2.2h-90.1c-9.5,0-17.3-7.7-17.3-17.3v-11c16.6-1.3,29.7-15.2,29.7-32.1v-59.6H391.9z"></path>{" "}
+                      <path d="M183.3,249.1c-2,0-3.9,0.8-5.3,2.2c-1.4,1.4-2.2,3.3-2.2,5.3c0,2,0.8,3.9,2.2,5.3c1.4,1.4,3.3,2.2,5.3,2.2 c2,0,3.9-0.8,5.3-2.2c1.4-1.4,2.2-3.3,2.2-5.3c0-2-0.8-3.9-2.2-5.3C187.2,249.9,185.3,249.1,183.3,249.1z"></path>{" "}
+                      <path d="M183.1,173.9c-12.8,0-23.3,10.4-23.3,23.3v0.5c0,4.1,3.4,7.5,7.5,7.5s7.5-3.4,7.5-7.5v-0.5c0-4.5,3.7-8.3,8.3-8.3 s8.3,3.7,8.3,8.3c0,4.4-1.7,8.5-4.8,11.6c-6.9,6.9-10.7,16.1-10.7,25.9c0,4.1,3.4,7.5,7.5,7.5s7.5-3.4,7.5-7.5 c0-5.8,2.2-11.2,6.3-15.3c5.9-5.9,9.2-13.8,9.2-22.2C206.4,184.3,195.9,173.9,183.1,173.9z"></path>{" "}
+                    </g>{" "}
+                  </g>{" "}
+                </g>
+              </svg>
+            }
+          />
+          <NyscServiceCard
+            header={"Revalidation Services"}
+            text={
+              "If you need to rejoin the NYSC service due to certain circumstances (such as deferring your service year), SirBconnect can guide you through the online application process for revalidation. It’s a convenient way to get back into the program and continue your service journey."
+            }
+            svg={
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                stroke={dark === "false" ? "#fff" : "var(--lightBlue)"}
+                strokeWidth="0.00024000000000000003"
+              >
+                <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
+                <g
+                  id="SVGRepo_tracerCarrier"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                ></g>
+                <g id="SVGRepo_iconCarrier">
+                  {" "}
+                  <path
+                    fillRule="evenodd"
+                    clipRule="evenodd"
+                    d="M12 10V8.125C9.93125 8.125 8.25 9.80625 8.25 11.875C8.25 12.5062 8.40625 13.1062 8.6875 13.625L7.775 14.5375C7.2875 13.7687 7 12.8562 7 11.875C7 9.1125 9.2375 6.875 12 6.875V5L14.5 7.5L12 10ZM15.3125 10.125L16.225 9.21251C16.7125 9.98126 17 10.8938 17 11.875C17 14.6375 14.7625 16.875 12 16.875V18.75L9.5 16.25L12 13.75V15.625C14.0687 15.625 15.75 13.9438 15.75 11.875C15.75 11.2438 15.5875 10.65 15.3125 10.125Z"
+                    fill={dark === "false" ? "#fff" : "var(--lightBlue)"}
+                  ></path>{" "}
+                  <path
+                    fillRule="evenodd"
+                    clipRule="evenodd"
+                    d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22ZM12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20Z"
+                    fill={dark === "false" ? "#fff" : "var(--lightBlue)"}
+                  ></path>{" "}
+                </g>
+              </svg>
+            }
+          />
+
+          <div className="line"></div>
+        </div>
       </section>
+
+      <section id="nysc"></section>
     </>
   );
 }

@@ -12,10 +12,10 @@
   --blurBlue: rgb(0 0 255 / 0.1);
   --gray: rgb(21 23 24 / 81%);
 }
-::selection{
-  background: white;
+/* ::selection{
+  background: var(--originBlurry);
   color: var(--blue);
-}
+} */
 html {
   scroll-behavior: smooth;
 }
@@ -56,7 +56,6 @@ img {
   position: relative;
   z-index: 1000;
   margin: 0 auto;
-  border: 1px solid white;
 }
 
 section {
@@ -79,14 +78,14 @@ section {
 }
 
 .top {
-  text-align: left;
+  text-align: center;
   display: flex;
   align-items: center;
   background: var(--blurBlue);
   border-radius: 30px;
   width: fit-content;
   padding: 0.1em 1em;
-  color: var(--blue);
+  color: var(--contactBlue);
   font-weight: 500;
   box-shadow: 0px 0px 2px 0px gray;
   margin-bottom: 10px;
@@ -163,9 +162,12 @@ button {
 
 /* Dark Mode */
 .dark {
+  /* ::selection{
+    background-color: white;
+  } */
   /* background: linear-gradient(to right, #1f1f1f, #212529); */
   background-color: black;
-  background-image: url("https://www.transparenttextures.com/patterns/assault.png");
+  background-image: url(https://www.transparenttextures.com/patterns/assault.png);
 
   .nav:first-child {
     border-color: white;
@@ -206,6 +208,10 @@ button {
   }
   /* Header */
 
+  .head-container > .top{
+    background-color: var(--originGray);
+  }
+
   .h1Text {
     color: hsl(0 0% 100% /0.95) !important;
   }
@@ -233,8 +239,8 @@ button {
   }
 
   .top {
-    color: var(--lightBlue) !important;
-    background: var(--originBlur);
+    color: white !important;
+    background: var(--originGray);
   }
 
   .counter {
@@ -242,12 +248,14 @@ button {
   }
 
   /* CEO */
-
+#CEO{
+    background: linear-gradient(17deg, hwb(0 100% 0% / 0.3) 50%, transparent 50%);
+}
   .ceoH1 {
     color: var(--lightBlue);
   }
   .ceo-container p {
-    color: hsl(0 0% 100% / 0.8);
+    color: hsl(0 0% 100% / 0.96);
   }
 
   /* Services */
@@ -351,9 +359,12 @@ button {
       opacity: 0.8.5;
     }
 
-    .reviewer,
-    b {
+    .reviewer
+     {
       color: #caf0f8;
+    }
+    b{
+      color: white;
     }
   }
 
@@ -590,6 +601,53 @@ button {
     color: rgba(255, 255, 255, 0.884);
   }
 
+  /* Nysc */
+
+  .nyscBackgroung{
+    opacity: .6;
+  }
+
+  .nyscHeader{
+    .top{
+      background-color: var(--originBlur);
+    }
+  }
+
+  .nyscH1{
+    color: hwb(0 100% 0%/ .85);
+  }
+  .nyscAboutTextCon > h3{
+    color: rgb(0, 80, 241);
+  }
+
+  .nyscAboutText{
+    color: white;
+  }
+  .brand{
+    background-color: var(--originGray);
+    border: 1px solid white;
+  }
+  .nyscServiceImage{
+    background-color: black;
+    border: 1px solid white;
+
+    svg{
+      fill: var(--lightBlue);
+    }
+  }
+  .bold{
+    color: rgb(237, 243, 255);
+    opacity: 1;
+  }
+
+  .line{
+    background-color: var(--lightBlue) !important;
+  }
+  .state{
+    color: white;
+    opacity: .85;
+  }
+
   @media (min-width: 801px ) {
     .nav-items {
       background-color: transparent;
@@ -717,21 +775,24 @@ button {
     height: 450px;
   }
 
+  .top{
+    padding: 0.5em 1em;
+    background-color: var(--blurBlue);
+    color: var(--contactBlue);
+  }
+
   .h1Text {
     font-size: 45px;
     font-weight: 700;
     text-transform: capitalize;
     padding: 10px 0;
     line-height: 1.5em;
-    color: rgb(21 23 24 / 0.96);
+    color: rgb(21 23 24 / 0.9);
   }
 }
 
 .head-container > * {
   margin-bottom: 10px;
-}
-.head-container > .top {
-  /* color: var(--contactBlue); */
 }
 
 .comName {
@@ -747,7 +808,7 @@ button {
   font-size: medium;
   font-weight: 500;
   margin: 1px auto;
-  box-shadow: 0px 0px 5px 0px rgb(141, 141, 141);
+  border: 1px solid black;
 }
 
 .contact::after,
@@ -1193,15 +1254,11 @@ background: linear-gradient(17deg,var(--blurBlue) 50%, transparent 50%);
 .reviewCard {
   width: 320px;
   padding: 1em;
-  /* background-color: hsla(0, 0%, 84%, 0.12); */
-
   border-radius: 10px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   transition: all 0.2s ease-in;
-  /* border: 1px solid darkgray; */
-  /* height: fit-content; */
   box-shadow: 0px 0px 5px 1px #58585886;
   img {
     height: 100px;
@@ -1210,7 +1267,8 @@ background: linear-gradient(17deg,var(--blurBlue) 50%, transparent 50%);
     border: 2px solid var(--originGray);
   }
   b {
-    font-weight: 300;
+    font-weight: 400;
+    opacity: .85;
   }
 }
 
@@ -1406,8 +1464,9 @@ background: linear-gradient(17deg,var(--blurBlue) 50%, transparent 50%);
   gap: 50px;
   padding: 2em;
 
-  .logo {
+ a> .logo {
     padding-left: 0;
+    height: 77px;
   }
 }
 
@@ -1906,7 +1965,8 @@ padding: 0;
   width: 100%;
   position: absolute;
   z-index: -1;
-  filter: opacity(0.2);
+  filter: opacity(0.09);
+  height: 100%;
 
 }
 .nysc2{
@@ -1918,6 +1978,10 @@ padding: 0;
   }
 }
 .nyscHeader {
+  width: 70%;
+  text-align: center;
+  margin: auto;
+  /* backdrop-filter: blur(5px); */
   display: block;
   padding: 2em;
 
@@ -1925,16 +1989,12 @@ padding: 0;
     font-size: large;
     margin: 10px auto;
     margin-bottom: 0;
-    color: var(--blue);
-  }
-  div {
-    width: 70%;
-    text-align: center;
-    margin: auto;
-    /* backdrop-filter: blur(5px); */
   }
 
-  .designH1 {
+
+
+
+  .nyscH1 {
     font-size: 60px;
     margin-bottom: 20px;
     font-weight: 500;
@@ -1957,6 +2017,10 @@ padding: 0;
   margin-bottom: 10px;
 }
 
+.nyscAboutTextCon > h3{
+  margin-bottom: 10px;
+}
+
 .nyscAboutText {
   font-size: 16px;
   opacity: 0.7;
@@ -1971,6 +2035,10 @@ padding: 0;
   padding: 1em;
   border-radius: 50%;
   display: grid;
+
+  svg{
+    width: 60px;
+  }
 }
 .brand {
   position: relative;
@@ -1989,6 +2057,7 @@ padding: 0;
 }
 .bold {
   font-size: x-large;
+  font-weight: 600;
   margin-top: 1em;
 }
 .state {
@@ -2001,12 +2070,20 @@ padding: 0;
   width: 50px;
 }
 
+#nyscAbout{
+  padding: 1em;
+}
+
 .nyscServiceContainer {
   margin-top: 5em;
   display: flex;
   gap: 50px;
   justify-content: center;
   position: relative;
+}
+
+.nyscServiceContainer.second{
+  margin-top: 0;
 }
 
 .line {
@@ -2060,7 +2137,7 @@ padding: 0;
     right: -100%;
     top: 0px;
     padding: 1em 0.5em;
-    background-color: white;
+    background-color: rgb(241, 241, 241);
     height: 100%;
     width: 300px;
     transition: right 0.2s linear;
@@ -2096,7 +2173,8 @@ padding: 0;
     margin-left: 1em;
 
     .top {
-      font-size: medium;
+      font-size: smaller;
+
     }
     .h1Text {
       font-size: xx-large;
@@ -2104,6 +2182,7 @@ padding: 0;
 
     .headerIMG {
       width: 400px;
+      height: 300px;
       margin-right: -100px;
     }
   }
@@ -2233,7 +2312,55 @@ padding: 0;
   .iBtn {
     padding: 0.7em !important;
   }
+  /* Nysc */
+.nyscHeader{
+  width: 100%;
+
+  .top{
+    background-color: white;
+    color: var(--contactBlue);
+  }
 }
+.nyscH1{
+  font-size: 40px !important;
+  padding: 0.5em 0;
+}
+
+.nyscAboutCon{
+  flex-direction: column;
+}
+.nyscAboutTextCon{
+  text-align: center;
+
+  h3{
+    margin: 10px ;
+  }
+}
+
+.nyscServiceContainer{
+  flex-direction: column;
+  align-items: center;
+
+  .line{
+    transform: rotate(90deg);
+    width: 800px;
+  }
+
+  .nyscServiceImage{
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%);
+  }
+  .state{
+    text-align: center;
+  }
+  .bold{
+    text-align: center;
+  }
+}
+}
+
+
 
 @media (max-width: 650px) {
   .header {
@@ -2271,7 +2398,7 @@ padding: 0;
   .contact-container {
     flex-direction: column;
     width: fit-content;
-    margin: 1px auto;
+    /* margin: 1px auto; */
     height: fit-content;
 
     .info:last-child {
@@ -2365,6 +2492,12 @@ padding: 0;
     width: 95%;
     font-size: larger;
   }
+
+  /* NYSC */
+
+  .nyscAboutTextCon{
+    width: 100% !important;
+  }
 }
 
 @media (max-width: 600px) {
@@ -2395,6 +2528,9 @@ padding: 0;
 
   .logo {
     padding-left: 10px;
+  }
+  .logoContainer > h4 {
+    display: none;
   }
 
   .header {
@@ -2444,9 +2580,7 @@ padding: 0;
     margin-left: 10px;
   }
 
-  #CEO {
-    background-image: linear-gradient(transparent, #15171822 60%);
-  }
+
   .ceo-container {
     flex-direction: column;
 
@@ -2462,7 +2596,8 @@ padding: 0;
   }
 
   .ceoImg {
-    width: 100%;
+    width: 70%;
+    margin: auto;
 
     img {
       box-shadow: none;
@@ -2496,8 +2631,9 @@ padding: 0;
 
   .contact-container {
     flex-direction: column;
+    /*  */
     width: fit-content;
-    margin: 1px auto;
+    margin-right: auto o !important;
     height: max-content;
 
     .info:last-child {
@@ -2506,8 +2642,9 @@ padding: 0;
   }
   .contactForm {
     button.contact {
-      width: 100%;
-      margin: 0;
+      width: 50%;
+      margin: 1em 0;
+      font-size: large;
     }
 
     label {
@@ -2550,6 +2687,14 @@ padding: 0;
   .webAboutText {
     font-size: large;
   }
+
+  .nyscH1{
+    font-size: 30px !important;
+  }
+
+  .nyscServiceContainer.second{
+    margin-top: 5em;
+  }
 }
 
 @media (max-width: 500px) {
@@ -2570,10 +2715,6 @@ padding: 0;
   img[src="/images/customer.png"] {
     height: 300px;
     width: 350px;
-  }
-
-  .logoContainer > h4 {
-    display: none;
   }
 
   .top {
@@ -2601,9 +2742,24 @@ padding: 0;
   .count {
     font-size: smaller;
   }
+
+  .brand{
+    width: 100%;
+  }
 }
 
 @media (max-width: 350px) {
+
+  .nyscH1{
+    font-size: 27px !important;
+  }
+
+  .h1Text{
+    font-size: 25px !important;
+  }
+  .ceoImg{
+    width: 80%;
+  }
   #reviews {
     padding: 1em;
   }

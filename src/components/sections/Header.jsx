@@ -5,14 +5,14 @@ function Header() {
     <>
       <section id="header" className="header">
         <div className="head-container">
-          <h3 className="top"> Your Premier Source for Quality Services </h3>
+          <h5 className="top"> Your Premier Source for Quality Services </h5>
           <h1 className="h1Text">
             Boost your research productivity with{" "}
             <span className="comName">SirBconnect</span> today!
           </h1>
 
           <Link to="#contact" >
-            <button className="contact"> Contact Us </button>
+            <button className="contact bullet"> Contact Us </button>
           </Link>
         </div>
 
