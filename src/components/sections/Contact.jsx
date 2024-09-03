@@ -195,7 +195,6 @@ function Contact() {
                 )}
               </div>
 
-              <div>
                 <button
                   className="contact bullet"
                   type="submit"
@@ -204,7 +203,6 @@ function Contact() {
                   {" "}
                   Submit{" "}
                 </button>
-              </div>
             </form>
           </div>
         </div>
