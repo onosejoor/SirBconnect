@@ -1718,12 +1718,12 @@ div.top > .count {
   }
 
   .cardText {
-    padding-left: 1em;
-    position: absolute;
-    bottom: 10px;
-    opacity: 0;
-    height: fit-content;
-    transition: 0.3s ease-in all;
+        position: absolute;
+        bottom: 1em;
+        opacity: 0;
+        height: fit-content;
+        transition: 0.3s ease-in all;
+        left: 1em;
   }
 
   .cardText > .projectCardHead {
@@ -2242,10 +2242,6 @@ img.headerImage {
     .designSkillText {
       max-width: 100%;
     }
-  }
-
-  .cardText {
-    top: calc(100% / 2.5) !important;
   }
 
   /* about section */
