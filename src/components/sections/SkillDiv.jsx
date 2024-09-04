@@ -40,26 +40,24 @@ const SkillDiv = (props) => {
             <p className="text">{props.text}</p>
           )}
 
-          <div className="seemore">          {show && (
-            <button
-              className="linkButton whatsNewLink"
-              onClick={(e) => {
-                setSee();
-                e.preventDefault();
-              }}
-            >
-              See Less
-            </button>
-          )}</div>
-
+          <div className="seemore">
+            {" "}
+            {show && (
+              <button
+                className="linkButton whatsNewLink"
+                onClick={(e) => {
+                  setSee();
+                  e.preventDefault();
+                }}
+              >
+                See Less
+              </button>
+            )}
+          </div>
         </div>
       </div>
 
-      <Link
-        to={props.url}
-        onClick={window.location.reload}
-        className="anchorSkill"
-      >
+      <Link reloadDocument to={props.url} className="anchorSkill">
         <div className="goToPage">
           <img src="/images/icons/arrowTop.svg" alt="Goto page arrow" />
         </div>

@@ -470,7 +470,7 @@ button {
   }
 
   .design-container {
-
+    
     h3 {
       background: linear-gradient(to right, blue, white);
       background-clip: text;
@@ -511,7 +511,6 @@ button {
     .top::after {
       background-color: var(--originGray);
     }
-    
 
     .btn {
       background-color: #0077b6;
@@ -1711,12 +1710,12 @@ div.top > .count {
   }
 
   .cardText {
-        position: absolute;
-        bottom: 1em;
-        opacity: 0;
-        height: fit-content;
-        transition: 0.3s ease-in all;
-        left: 1em;
+    position: absolute;
+    bottom: 1em;
+    opacity: 0;
+    height: fit-content;
+    transition: 0.3s ease-in all;
+    left: 1em;
   }
 
   .cardText > .projectCardHead {

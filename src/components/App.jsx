@@ -12,8 +12,6 @@ import SchoolCas from "./service-page/router-sections/SchoolCas";
 import NYSC from "./service-page/router-sections/NYSC";
 import { DarkThemeContext } from "./Context";
 
-console.log(window.location);
-
 function App() {
   // Get local storage Theme
   const [dark, setDark] = useState(localStorage.getItem("dark") || "false");

@@ -5,6 +5,8 @@ import FormInput from "../snippets/Inputs";
 import { DarkThemeContext } from "../Context";
 
 function Contact() {
+  // console.log(import.meta.env.VITE_FORM_SPREE_PASS);
+  
   const { dark } = useContext(DarkThemeContext);
   const [inputs, setInputs] = useState({
     name: "",
@@ -150,8 +152,8 @@ function Contact() {
           <div className="touch">
             <form
               className="contactForm"
-              // action="https://formspree.io/f/xeojkwyo"
-              // method="POST"
+              action={import.meta.env.VITE_FORM_SPREE_PASS}
+              method="POST"
             >
               <FormInput
                 name="name"
