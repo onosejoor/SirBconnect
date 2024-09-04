@@ -400,7 +400,7 @@ button {
   .formInput,
   .contactTextArea {
     background-color: rgb(33, 33, 33);
-    border-color: var(--blurBlue) !important;
+    border-color: #ade8f4c9 !important;
     color: rgb(215, 215, 215);
   }
 
@@ -470,12 +470,9 @@ button {
   }
 
   .design-container {
-    .comName {
-      color: #19a4ef;
-    }
 
     h3 {
-      background: linear-gradient(to right, #ade8f4, red);
+      background: linear-gradient(to right, blue, white);
       background-clip: text;
     }
     h4 {
@@ -485,10 +482,6 @@ button {
 
   .graphicAboutHeader {
     color: #ade8f4;
-
-    .comName {
-      color: #19a4ef;
-    }
   }
 
   #graphicSkills {
