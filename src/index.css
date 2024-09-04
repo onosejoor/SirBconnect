@@ -2532,8 +2532,8 @@ img.headerImage {
     }
 
     .top {
-      font-size: medium;
-      margin: 1px auto;
+      font-size: x-small;
+      margin:auto;
       font-weight: 500;
     }
 
@@ -2676,7 +2676,7 @@ img.headerImage {
   }
 
   .nyscH1 {
-    font-size: 30px !important;
+    font-size: 25px !important;
   }
 
   .nyscServiceContainer.second {
@@ -2737,7 +2737,13 @@ img.headerImage {
 
 @media (max-width: 350px) {
   .nyscH1 {
-    font-size: 27px !important;
+    font-size: 21px !important;
+  }
+  .nyscHeader > .top{
+    font-size: small;
+  }
+  .nyscAboutCon > img{
+    height: fit-content;
   }
 
   .h1Text {
