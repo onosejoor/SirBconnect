@@ -204,7 +204,7 @@ button {
   }
   /* Header */
 
-  .head-container > .top{
+  .head-container > .top {
     background-color: var(--originGray);
   }
 
@@ -244,9 +244,13 @@ button {
   }
 
   /* CEO */
-#CEO{
-    background: linear-gradient(17deg, hwb(0 100% 0% / 0.3) 50%, transparent 50%);
-}
+  #CEO {
+    background: linear-gradient(
+      17deg,
+      hwb(0 100% 0% / 0.3) 50%,
+      transparent 50%
+    );
+  }
   .ceoH1 {
     color: var(--lightBlue);
   }
@@ -355,11 +359,10 @@ button {
       opacity: 0.8.5;
     }
 
-    .reviewer
-     {
+    .reviewer {
       color: #caf0f8;
     }
-    b{
+    b {
       color: white;
     }
   }
@@ -397,7 +400,7 @@ button {
   .formInput,
   .contactTextArea {
     background-color: rgb(33, 33, 33);
-    border-color: #48cae4;
+    border-color: var(--blurBlue) !important;
     color: rgb(215, 215, 215);
   }
 
@@ -496,6 +499,9 @@ button {
     background-color: rgb(42, 42, 42);
     border: 1px solid #ade8f4;
   }
+  .designSkillText > .text {
+    color: rgba(255, 255, 255, 0.756);
+  }
 
   .carouselArrow {
     fill: #ade8f4 !important;
@@ -505,19 +511,22 @@ button {
     .headerSpan {
       color: white;
     }
+    h1.point::before::after {
+      background-color: var(--blue);
+    }
     .top::before,
     .top::after {
-      background-color: #000000;
+      background-color: var(--originGray);
     }
-
-    .projectCardHead {
-      color: #ade8f4;
-    }
+    
 
     .btn {
       background-color: #0077b6;
       color: white;
     }
+  }
+  .projectCardHead {
+    color: var(--lightBlue);
   }
 
   .designSkillText {
@@ -554,6 +563,9 @@ button {
     .webText {
       color: rgba(255, 255, 255, 0.89);
     }
+  }
+  .projectText {
+    color: hsla(0, 0%, 100%, 0.829) !important;
   }
 
   /* 404 Error Page */
@@ -599,60 +611,56 @@ button {
 
   /* Nysc */
 
-  .nyscBackgroung{
-    opacity: .6;
+  .nyscBackgroung {
+    opacity: 0.6;
   }
 
-  .nyscHeader{
-    .top{
+  .nyscHeader {
+    .top {
       background-color: var(--originBlur);
     }
   }
 
-  .nyscH1{
-    color: hwb(0 100% 0%/ .85);
+  .nyscH1 {
+    color: hwb(0 100% 0%/ 0.85);
   }
-  .nyscAboutTextCon > h3{
+  .nyscAboutTextCon > h3 {
     color: rgb(0, 80, 241);
   }
 
-  .nyscAboutText{
+  .nyscAboutText {
     color: white;
   }
-  .brand{
+  .brand {
     background-color: var(--originGray);
     border: 1px solid white;
   }
-  .nyscServiceImage{
+  .nyscServiceImage {
     background-color: black;
     border: 1px solid white;
 
-    svg{
+    svg {
       fill: var(--lightBlue);
     }
   }
-  .bold{
+  .bold {
     color: rgb(237, 243, 255);
     opacity: 1;
   }
 
-  .line{
+  .line {
     background-color: var(--lightBlue) !important;
   }
-  .state{
+  .state {
     color: white;
-    opacity: .85;
+    opacity: 0.85;
   }
 
-  @media (min-width: 801px ) {
+  @media (min-width: 801px) {
     .nav-items {
       background-color: transparent;
-
     }
-
   }
-
-  
 }
 
 /* Nav bar */
@@ -771,7 +779,7 @@ button {
     height: 450px;
   }
 
-  .top{
+  .top {
     padding: 0.5em 1em;
     background-color: var(--blurBlue);
     color: var(--contactBlue);
@@ -873,7 +881,7 @@ div.top > .count {
 /* CEO Section */
 
 #CEO {
-background: linear-gradient(17deg,var(--blurBlue) 50%, transparent 50%);
+  background: linear-gradient(17deg, var(--blurBlue) 50%, transparent 50%);
 }
 
 .ceo-container {
@@ -1264,7 +1272,7 @@ background: linear-gradient(17deg,var(--blurBlue) 50%, transparent 50%);
   }
   b {
     font-weight: 400;
-    opacity: .85;
+    opacity: 0.85;
   }
 }
 
@@ -1460,7 +1468,7 @@ background: linear-gradient(17deg,var(--blurBlue) 50%, transparent 50%);
   gap: 50px;
   padding: 2em;
 
- a> .logo {
+  a > .logo {
     padding-left: 0;
     height: 77px;
   }
@@ -1668,6 +1676,9 @@ background: linear-gradient(17deg,var(--blurBlue) 50%, transparent 50%);
     border-radius: 5px;
     height: 250px;
     width: 500px;
+  }
+  .text {
+    margin: 20px auto;
   }
 }
 
@@ -1953,23 +1964,22 @@ img.headerImage {
 
 /* NYSC */
 
-#nyscHeader{
-padding: 0;
-} 
+#nyscHeader {
+  padding: 0;
+}
 
-.nyscBackgroung{
+.nyscBackgroung {
   width: 100%;
   position: absolute;
   z-index: -1;
   filter: opacity(0.09);
   height: 100%;
-
 }
-.nysc2{
+.nysc2 {
   flex-direction: row-reverse;
   gap: 50px;
 
-  .nyscAboutTextCon{
+  .nyscAboutTextCon {
     width: 600px;
   }
 }
@@ -1986,9 +1996,6 @@ padding: 0;
     margin: 10px auto;
     margin-bottom: 0;
   }
-
-
-
 
   .nyscH1 {
     font-size: 60px;
@@ -2013,7 +2020,7 @@ padding: 0;
   margin-bottom: 10px;
 }
 
-.nyscAboutTextCon > h3{
+.nyscAboutTextCon > h3 {
   margin-bottom: 10px;
 }
 
@@ -2032,7 +2039,7 @@ padding: 0;
   border-radius: 50%;
   display: grid;
 
-  svg{
+  svg {
     width: 60px;
   }
 }
@@ -2066,7 +2073,7 @@ padding: 0;
   width: 50px;
 }
 
-#nyscAbout{
+#nyscAbout {
   padding: 1em;
 }
 
@@ -2078,7 +2085,7 @@ padding: 0;
   position: relative;
 }
 
-.nyscServiceContainer.second{
+.nyscServiceContainer.second {
   margin-top: 0;
 }
 
@@ -2139,7 +2146,6 @@ padding: 0;
     transition: right 0.2s linear;
     align-items: baseline !important;
 
-
     .nav {
       margin-left: 50px;
     }
@@ -2170,7 +2176,6 @@ padding: 0;
 
     .top {
       font-size: smaller;
-
     }
     .h1Text {
       font-size: xx-large;
@@ -2309,54 +2314,52 @@ padding: 0;
     padding: 0.7em !important;
   }
   /* Nysc */
-.nyscHeader{
-  width: 100%;
+  .nyscHeader {
+    width: 100%;
 
-  .top{
-    background-color: white;
-    color: var(--contactBlue);
+    .top {
+      background-color: white;
+      color: var(--contactBlue);
+    }
   }
-}
-.nyscH1{
-  font-size: 40px !important;
-  padding: 0.5em 0;
-}
-
-.nyscAboutCon{
-  flex-direction: column;
-}
-.nyscAboutTextCon{
-  text-align: center;
-
-  h3{
-    margin: 10px ;
-  }
-}
-
-.nyscServiceContainer{
-  flex-direction: column;
-  align-items: center;
-
-  .line{
-    transform: rotate(90deg);
-    width: 800px;
+  .nyscH1 {
+    font-size: 40px !important;
+    padding: 0.5em 0;
   }
 
-  .nyscServiceImage{
-    left: 50%;
-    right: 50%;
-    transform: translate(-50%);
+  .nyscAboutCon {
+    flex-direction: column;
   }
-  .state{
+  .nyscAboutTextCon {
     text-align: center;
+
+    h3 {
+      margin: 10px;
+    }
   }
-  .bold{
-    text-align: center;
+
+  .nyscServiceContainer {
+    flex-direction: column;
+    align-items: center;
+
+    .line {
+      transform: rotate(90deg);
+      width: 800px;
+    }
+
+    .nyscServiceImage {
+      left: 50%;
+      right: 50%;
+      transform: translate(-50%);
+    }
+    .state {
+      text-align: center;
+    }
+    .bold {
+      text-align: center;
+    }
   }
 }
-}
-
-
 
 @media (max-width: 650px) {
   .header {
@@ -2491,7 +2494,7 @@ padding: 0;
 
   /* NYSC */
 
-  .nyscAboutTextCon{
+  .nyscAboutTextCon {
     width: 100% !important;
   }
 }
@@ -2575,7 +2578,6 @@ padding: 0;
   .contact::after {
     margin-left: 10px;
   }
-
 
   .ceo-container {
     flex-direction: column;
@@ -2684,11 +2686,11 @@ padding: 0;
     font-size: large;
   }
 
-  .nyscH1{
+  .nyscH1 {
     font-size: 30px !important;
   }
 
-  .nyscServiceContainer.second{
+  .nyscServiceContainer.second {
     margin-top: 5em;
   }
 }
@@ -2739,21 +2741,20 @@ padding: 0;
     font-size: smaller;
   }
 
-  .brand{
+  .brand {
     width: 100%;
   }
 }
 
 @media (max-width: 350px) {
-
-  .nyscH1{
+  .nyscH1 {
     font-size: 27px !important;
   }
 
-  .h1Text{
+  .h1Text {
     font-size: 25px !important;
   }
-  .ceoImg{
+  .ceoImg {
     width: 80%;
   }
   #reviews {
