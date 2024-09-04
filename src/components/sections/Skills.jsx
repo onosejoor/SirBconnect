@@ -14,9 +14,9 @@ function Skills() {
         />
         <SkillDiv
           src="/images/skills/nysc.png"
-          header="NYSC Registration"
+          header="NYSC Services"
           url="nysc"
-          text=" SirBconnect offers reliable internet services and comprehensive research solutions. Whether you need high-speed internet services: Online registration, Data entry, Data capturing, Web management etc, or in-depth research for academic or professional projects, we’ve got you covered. Our team ensures you stay connected and have access to the information you need."
+          text="SirBconnect offers comprehensive services to National Youth Service Corps (NYSC) members, ensuring a smooth transition during their service year. From orientation camp registration assistance to skill development workshops, SirBconnect supports corps members in maximizing their NYSC experience. Whether it’s career counseling, or networking opportunities, SirBconnect is committed to empowering young graduates as they contribute to nation-building."
         />
 
         <SkillDiv
