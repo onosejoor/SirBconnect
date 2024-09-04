@@ -368,14 +368,10 @@ button {
   }
 
   /* Contact */
-  #contact {
-    background: linear-gradient(to right, #1c1d1dd6, #101010);
-    border-top: 0.2px solid #001233;
-  }
 
   .touchWrap {
     background: #0c0c0c;
-    border-color: white;
+    border-color: rgba(255, 255, 255, 0.5);
 
     h1 {
       color: #ade8f4;
@@ -400,13 +396,13 @@ button {
   .formInput,
   .contactTextArea {
     background-color: rgb(33, 33, 33);
-    border-color: #ade8f4c9 !important;
+    border-color: transparent !important;
     color: rgb(215, 215, 215);
   }
 
   .formInput::placeholder,
   .contactTextArea::placeholder {
-    color: rgb(215, 215, 215);
+    color: rgba(215, 215, 215, 0.728);
   }
 
   .contactHead {
@@ -1418,11 +1414,13 @@ div.top > .count {
 .contactTextArea {
   background-color: #c5c5c599;
   color: black;
+  margin: 5px 0;
+
 }
 
 .formInput::placeholder,
 .contactTextArea::placeholder {
-  color: var(--originBlur);
+  color: var(--opacityBlue);
 }
 
 .error {

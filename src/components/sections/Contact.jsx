@@ -5,7 +5,7 @@ import FormInput from "../snippets/Inputs";
 import { DarkThemeContext } from "../Context";
 
 function Contact() {
-  // console.log(import.meta.env.VITE_FORM_SPREE_PASS);
+  // console.log(import.meta.env.VITE_FORM_SPREE_PASS, import.meta.env.FORM_SPREE_PASS);
   
   const { dark } = useContext(DarkThemeContext);
   const [inputs, setInputs] = useState({
