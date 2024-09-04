@@ -5,7 +5,7 @@ function Reviews() {
     <>
       <section id="reviews">
         <div>
-        <h1 className="top reviewHead"> Customer Reviews </h1>
+        <h4 className="top reviewHead"> Customer Reviews </h4>
         </div>
         <div id="reviewWrapper">
 

@@ -5,7 +5,7 @@ const MeetStaff = () => {
   return (
     <>
       <section id="staff">
-        <h3 className="top"> Meet Our Team </h3>
+        <h5 className="top"> Meet Our Team </h5>
 
         <h1 className="h1Text">
           Get to know the experts driving{" "}
