@@ -2,9 +2,9 @@ import { useState, useEffect, useContext } from "react";
 import Lists from "../snippets/List";
 import { DarkThemeContext } from "../Context";
 
-function Nav({routed }) {
+function Nav({ routed }) {
   const [showed, setShowed] = useState(false);
-  const {dark, setDark} = useContext(DarkThemeContext)
+  const { dark, setDark } = useContext(DarkThemeContext);
 
   const set = () => {
     setDark((prev) => {
@@ -15,7 +15,6 @@ function Nav({routed }) {
       }
     });
   };
-  
 
   useEffect(() => {
     if (showed) {
@@ -70,7 +69,7 @@ function Nav({routed }) {
           />
 
           <svg
-          className="bars"
+            className="bars"
             width="30px"
             height="30px"
             viewBox="0 0 24 24"
@@ -98,25 +97,23 @@ function Nav({routed }) {
             />
           </svg>
           <ul className="nav-items">
-            {showed && (
-              <svg
-                onClick={show}
-                fill={dark === "false" ? "#001233" : "#fff"}
-                width="30px"
-                height="30px"
-                viewBox="0 0 256 256"
-                id="Flat"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  onClick={show}
-                  d="M202.82861,197.17188a3.99991,3.99991,0,1,1-5.65722,5.65624L128,133.65723,58.82861,202.82812a3.99991,3.99991,0,0,1-5.65722-5.65624L122.343,128,53.17139,58.82812a3.99991,3.99991,0,0,1,5.65722-5.65624L128,122.34277l69.17139-69.17089a3.99991,3.99991,0,0,1,5.65722,5.65624L133.657,128Z"
-                />
-              </svg>
-            )}
-
             {routed ? (
               <>
+                {showed && (
+                  <div>
+                    <svg
+                      onClick={show}
+                      fill={dark === "false" ? "#001233" : "#fff"}
+                      width="50px"
+                      height="50px"
+                      viewBox="0 0 256 256"
+                      id="Flat"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path d="M202.82861,197.17188a3.99991,3.99991,0,1,1-5.65722,5.65624L128,133.65723,58.82861,202.82812a3.99991,3.99991,0,0,1-5.65722-5.65624L122.343,128,53.17139,58.82812a3.99991,3.99991,0,0,1,5.65722-5.65624L128,122.34277l69.17139-69.17089a3.99991,3.99991,0,0,1,5.65722,5.65624L133.657,128Z" />
+                    </svg>
+                  </div>
+                )}
                 <Lists
                   click={showed ? shut : null}
                   class1="nav"
@@ -134,6 +131,21 @@ function Nav({routed }) {
               </>
             ) : (
               <>
+                {showed && (
+                  <div>
+                    <svg
+                      onClick={show}
+                      fill={dark === "false" ? "#001233" : "#fff"}
+                      width="30px"
+                      height="30px"
+                      viewBox="0 0 256 256"
+                      id="Flat"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path d="M202.82861,197.17188a3.99991,3.99991,0,1,1-5.65722,5.65624L128,133.65723,58.82861,202.82812a3.99991,3.99991,0,0,1-5.65722-5.65624L122.343,128,53.17139,58.82812a3.99991,3.99991,0,0,1,5.65722-5.65624L128,122.34277l69.17139-69.17089a3.99991,3.99991,0,0,1,5.65722,5.65624L133.657,128Z" />
+                    </svg>
+                  </div>
+                )}
                 <Lists
                   click={showed ? shut : null}
                   class1="nav"
@@ -161,6 +173,46 @@ function Nav({routed }) {
                   class2="nav-link"
                   text="Reviews"
                   link="#reviews"
+                />
+              </>
+            )}
+            {showed && (
+              <>
+                <h6 className="top">Web Pages</h6>
+                <Lists
+                  click={showed ? shut : null}
+                  class1="nav"
+                  class2="nav-link"
+                  text="Research Services"
+                  link="researches"
+                />
+                <Lists
+                  click={showed ? shut : null}
+                  class1="nav"
+                  class2="nav-link"
+                  text="NYSC"
+                  link="nysc"
+                />{" "}
+                <Lists
+                  click={showed ? shut : null}
+                  class1="nav"
+                  class2="nav-link"
+                  text="Graphic-design"
+                  link="graphic-design"
+                />
+                <Lists
+                  click={showed ? shut : null}
+                  class1="nav"
+                  class2="nav-link"
+                  text="Web-Devlopment"
+                  link="web-dev"
+                />{" "}
+                <Lists
+                  click={showed ? shut : null}
+                  class1="nav"
+                  class2="nav-link"
+                  text="Scholarships"
+                  link="scholarships"
                 />
               </>
             )}

@@ -71,7 +71,7 @@ function App() {
             <Route path="/" element={<SirB curRef={ref} />} />
             <Route path="graphic-design" element={<Graphics />} />
             <Route path="web-dev" element={<WebDev />} />
-            <Route path="schorlarships" element={<Schorlarship />} />
+            <Route path="scholarships" element={<Schorlarship />} />
             <Route path="teams" element={<StaffsRouterComponent />} />
             <Route path="researches" element={<Research />} />
             <Route path="school-cas" element={<SchoolCas />} />

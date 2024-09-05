@@ -73,7 +73,7 @@ function Footer({ routed }) {
                 <Lists
                   class2="footer-link"
                   text="Scholarships"
-                  link={"schorlarships"}
+                  link={"scholarships"}
                 />
 
                 <Lists

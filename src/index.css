@@ -396,7 +396,7 @@ button {
   .formInput,
   .contactTextArea {
     background-color: rgb(33, 33, 33);
-    border-color: transparent !important;
+    border-color: transparent;
     color: rgb(215, 215, 215);
   }
 
@@ -466,7 +466,6 @@ button {
   }
 
   .design-container {
-    
     h3 {
       background: linear-gradient(to right, blue, white);
       background-clip: text;
@@ -1019,12 +1018,13 @@ div.top > .count {
   background-color: #ffffff;
   width: 260px;
   text-align: center;
-  padding: 2em 1em;
+  padding: 1em;
   border: 1px solid var(--contactBlue);
   border-radius: 10px;
   transition: 0.2s all ease-in;
   position: relative;
   overflow: hidden;
+  height: 350px;
 }
 
 .staffText {
@@ -1065,6 +1065,13 @@ div.top > .count {
   text-transform: capitalize;
 }
 
+.staffSvg {
+  a {
+    padding: 10px;
+    display: block;
+  }
+}
+
 .staffTextContainer {
   padding: 1em;
 
@@ -1076,9 +1083,9 @@ div.top > .count {
 .staffHidden {
   transition: 0.3s all ease-in;
   position: absolute;
-  top: 0;
   opacity: 0;
   left: 0;
+  top: 0;
   bottom: 0;
 }
 
@@ -1264,6 +1271,11 @@ div.top > .count {
   }
 }
 
+.revImgWrap {
+  width: fit-content;
+  text-align: center;
+}
+
 .reviewer {
   text-transform: capitalize;
 }
@@ -1415,7 +1427,6 @@ div.top > .count {
   background-color: #c5c5c599;
   color: black;
   margin: 5px 0;
-
 }
 
 .formInput::placeholder,
@@ -1885,7 +1896,7 @@ p.webText {
 }
 
 .scholarshipCard:hover {
-  box-shadow: 0px 0px 15px 5px rgba(36, 36, 36, 0.553);
+  box-shadow: 0px 0px 5px 0px var(--gray);
 }
 .scholarshipCard:nth-child(2) {
   margin-top: 3em;
@@ -2128,6 +2139,7 @@ img.headerImage {
     flex-direction: column;
     position: fixed;
     right: -100%;
+    overflow: auto;
     top: 0px;
     padding: 1em 0.5em;
     background-color: rgb(241, 241, 241);
@@ -2135,10 +2147,14 @@ img.headerImage {
     width: 300px;
     transition: right 0.2s linear;
     align-items: baseline !important;
-
+    -ms-overflow-style: none;
+    scrollbar-width: none; 
     .nav {
       margin-left: 50px;
     }
+  }
+  .nav-items::-webkit-scrollbar {
+    display: none;
   }
   .nav {
     text-align: center;
@@ -2530,7 +2546,7 @@ img.headerImage {
 
     .top {
       font-size: x-small;
-      margin:auto;
+      margin: auto;
       font-weight: 500;
     }
 
@@ -2672,8 +2688,8 @@ img.headerImage {
     font-size: large;
   }
 
-  .nyscH1 {
-    font-size: 25px !important;
+  .nyscH1{
+    font-size: 34px !important;
   }
 
   .nyscServiceContainer.second {
@@ -2684,6 +2700,13 @@ img.headerImage {
 @media (max-width: 500px) {
   .skills {
     width: 100%;
+  }
+  #contact {
+    padding: 0;
+
+    .touchWrap {
+      border-radius: 0;
+    }
   }
 }
 
@@ -2730,16 +2753,20 @@ img.headerImage {
   .brand {
     width: 100%;
   }
+
+  .nyscH1{
+    font-size: 20px !important;
+  }
 }
 
 @media (max-width: 350px) {
   .nyscH1 {
     font-size: 21px !important;
   }
-  .nyscHeader > .top{
+  .nyscHeader > .top {
     font-size: small;
   }
-  .nyscAboutCon > img{
+  .nyscAboutCon > img {
     height: fit-content;
   }
 

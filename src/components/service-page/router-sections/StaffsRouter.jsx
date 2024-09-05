@@ -15,25 +15,25 @@ const StaffsRouterComponent = () => {
           des="Sunday Ezekiel is our creative powerhouse, specializing in branding and digital media. With over a decade of experience, he crafts stunning designs that captivate and inspire."
           name="Obinna N"
           position="ICT technician"
-          img="https://picsum.photos/id/870/200/300?grayscale"
+            img="/images/staffs & CEO/boy.png"
         />{" "}
         <StaffCard
           des="Sunday Ezekiel is our creative powerhouse, specializing in branding and digital media. With over a decade of experience, he crafts stunning designs that captivate and inspire."
           name="Samuel"
           position="Computer engineer"
-          img="https://picsum.photos/id/870/200/300?grayscale"
+            img="/images/staffs & CEO/boy.png"
         />{" "}
         <StaffCard
           des="Sunday Ezekiel is our creative powerhouse, specializing in branding and digital media. With over a decade of experience, he crafts stunning designs that captivate and inspire."
           name="christy"
           position="researcher"
-          img="https://picsum.photos/id/870/200/300?grayscale"
+            img="/images/staffs & CEO/girl.jpeg"
         />{" "}
         <StaffCard
           des="Sunday Ezekiel is our creative powerhouse, specializing in branding and digital media. With over a decade of experience, he crafts stunning designs that captivate and inspire."
           name="peter A.O"
           position="Researcher"
-          img="https://picsum.photos/id/870/200/300?grayscale"
+            img="/images/staffs & CEO/boy.png"
         />{" "}
         <StaffCard
           des="Sunday Ezekiel is our creative powerhouse, specializing in branding and digital media. With over a decade of experience, he crafts stunning designs that captivate and inspire."

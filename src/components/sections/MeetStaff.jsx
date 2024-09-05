@@ -17,7 +17,8 @@ const MeetStaff = () => {
             des="Sunday Ezekiel is our creative powerhouse, specializing in branding and digital media. With over a decade of experience, he crafts stunning designs that captivate and inspire."
             name="Austin E.U"
             position="Manager"
-            img="/images/Router/teams/austin.png"
+            // img="/images/Router/teams/austin.png"
+            img="/images/staffs & CEO/boy.png"
           />
           <StaffCard
             des="Sunday Ezekiel is our creative powerhouse, specializing in branding and digital media. With over a decade of experience, he crafts stunning designs that captivate and inspire."

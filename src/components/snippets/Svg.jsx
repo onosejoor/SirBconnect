@@ -1,8 +1,10 @@
+import { Link } from "react-router-dom";
+
 const Svg = (props) => {
   return (
-    <a href={props.link}>
-     {props.svg}
-    </a>
+    <Link to={props.link} >
+     {props.svg}      
+    </Link>
   );
 };
 

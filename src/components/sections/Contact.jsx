@@ -183,7 +183,7 @@ function Contact() {
                 {" "}
                 <label htmlFor="message">Message</label>
                 <textarea
-                  style={{ borderColor: error.message ? "red" : "inherit" }}
+                  style={{ borderColor: error.message ? "red" : "null" }}
                   id="message"
                   className="contactTextArea"
                   name="message"

@@ -4,7 +4,7 @@ const FormInput = (props) => {
       <div>
         {" "}
         <label htmlFor="name">{props.name}</label>
-        <input style={{borderColor: props.error ? "red" : "inherit"}}
+        <input style={{borderColor: props.error ? "red" : "null"}}
           id={props.name}
           className="formInput"
           type="text"
